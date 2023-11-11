@@ -1,0 +1,475 @@
+Using pre-set license
+Built from '2022.3/release' branch; Version is '2022.3.12f1 (4fe6e059c7ef) revision 5236448'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19043) 64bit Professional' Language: 'ru' Physical Memory: 16314 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\UnityProgramm\2022.3.12f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker5
+-projectPath
+E:/nukio_games/FNAF-Parkour/fnaf parkour
+-logFile
+Logs/AssetImportWorker5.log
+-srvPort
+50729
+Successfully changed project path to: E:/nukio_games/FNAF-Parkour/fnaf parkour
+E:/nukio_games/FNAF-Parkour/fnaf parkour
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [20680] Host "[IP] 192.168.0.7 [Port] 0 [Flags] 2 [Guid] 454766713 [EditorId] 454766713 [Version] 1048832 [Id] WindowsEditor(7,HOME-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [20680] Host "[IP] 192.168.0.7 [Port] 0 [Flags] 2 [Guid] 454766713 [EditorId] 454766713 [Version] 1048832 [Id] WindowsEditor(7,HOME-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 11 workers.
+Refreshing native plugins compatible for Editor in 8.96 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.12f1 (4fe6e059c7ef)
+[Subsystems] Discovering subsystems at path D:/UnityProgramm/2022.3.12f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/nukio_games/FNAF-Parkour/fnaf parkour/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1660 (ID=0x2184)
+    Vendor:   NVIDIA
+    VRAM:     5980 MB
+    Driver:   31.0.15.3742
+Initialize mono
+Mono path[0] = 'D:/UnityProgramm/2022.3.12f1/Editor/Data/Managed'
+Mono path[1] = 'D:/UnityProgramm/2022.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/UnityProgramm/2022.3.12f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56484
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/UnityProgramm/2022.3.12f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/UnityProgramm/2022.3.12f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: D:/UnityProgramm/2022.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.006370 seconds.
+- Loaded All Assemblies, in  0.486 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 402 ms
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.839 seconds
+Domain Reload Profiling: 1324ms
+	BeginReloadAssembly (138ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (51ms)
+	RebuildNativeTypeToScriptingClass (20ms)
+	initialDomainReloadingComplete (75ms)
+	LoadAllAssembliesAndSetupDomain (202ms)
+		LoadAssemblies (138ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (198ms)
+			TypeCache.Refresh (196ms)
+				TypeCache.ScanAssembly (180ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (839ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (756ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (547ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (3ms)
+			ProcessInitializeOnLoadAttributes (140ms)
+			ProcessInitializeOnLoadMethodAttributes (61ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.921 seconds
+Refreshing native plugins compatible for Editor in 4.16 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.935 seconds
+Domain Reload Profiling: 1856ms
+	BeginReloadAssembly (210ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (9ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (27ms)
+	RebuildCommonClasses (55ms)
+	RebuildNativeTypeToScriptingClass (23ms)
+	initialDomainReloadingComplete (60ms)
+	LoadAllAssembliesAndSetupDomain (572ms)
+		LoadAssemblies (415ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (281ms)
+			TypeCache.Refresh (241ms)
+				TypeCache.ScanAssembly (219ms)
+			ScanForSourceGeneratedMonoScriptInfo (23ms)
+			ResolveRequiredComponents (16ms)
+	FinalizeReload (936ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (672ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (32ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (77ms)
+			ProcessInitializeOnLoadAttributes (505ms)
+			ProcessInitializeOnLoadMethodAttributes (48ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 4.03 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3430 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 54 unused Assets / (126.7 KB). Loaded Objects now: 3888.
+Memory consumption went from 133.8 MB to 133.6 MB.
+Total: 4.599500 ms (FindLiveObjects: 0.355800 ms CreateObjectMapping: 0.449500 ms MarkObjects: 3.610500 ms  DeleteObjects: 0.182200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 163438.378183 seconds.
+  path: Assets/YandexGame/ScriptsYG/UnityToolbag-main/ConditionallyVisiblePropertyDrawer/Runtime/ConditionallyVisibleAttribute.cs
+  artifactKey: Guid(6a5802bf4626c294aa90d7ed0eca4542) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/YandexGame/ScriptsYG/UnityToolbag-main/ConditionallyVisiblePropertyDrawer/Runtime/ConditionallyVisibleAttribute.cs using Guid(6a5802bf4626c294aa90d7ed0eca4542) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ec02b47128f568b48b51c452e618d0e1') in 0.166505 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/YandexGame/ScriptsYG/Editor/Icons/Icon_LanguageYG.png
+  artifactKey: Guid(374b83e0248a67c4b8ee15e6d25c0608) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/YandexGame/ScriptsYG/Editor/Icons/Icon_LanguageYG.png using Guid(374b83e0248a67c4b8ee15e6d25c0608) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'efbd977fa31b6c9c1d6a3bf492fcf3fb') in 0.109223 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/YandexGame/ScriptsYG/UnityToolbag-main/Notices.txt
+  artifactKey: Guid(cc6e38c4bf37af648bb6cebdc6fec015) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/YandexGame/ScriptsYG/UnityToolbag-main/Notices.txt using Guid(cc6e38c4bf37af648bb6cebdc6fec015) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6b3ba5f3fe8e93fecb98d184c313aacd') in 0.032072 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Hertzole/Gold Player/Examples/Interaction/Red.mat
+  artifactKey: Guid(4ca1d352f3a59544c9a9bcc32c060887) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hertzole/Gold Player/Examples/Interaction/Red.mat using Guid(4ca1d352f3a59544c9a9bcc32c060887) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e30eafe2f5619f72fea85ad74edf44db') in 0.037635 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Hertzole/Gold Player/Scripts/Editor/Animator/GoldPlayerAnimatorEditor.cs
+  artifactKey: Guid(d7e9130da5d923d46b09720197f15ee2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hertzole/Gold Player/Scripts/Editor/Animator/GoldPlayerAnimatorEditor.cs using Guid(d7e9130da5d923d46b09720197f15ee2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a4ef9eb673696bb00dc0cb845495840b') in 0.016763 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000265 seconds.
+  path: Assets/YandexGame/ScriptsYG/Editor/Icons/Icon_YandexGame.png
+  artifactKey: Guid(75e2137d812e0484ca28df46b6bbc6f2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/YandexGame/ScriptsYG/Editor/Icons/Icon_YandexGame.png using Guid(75e2137d812e0484ca28df46b6bbc6f2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '463cab940b66b005142364c1a7f9f63d') in 0.031289 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/YandexGame/ScriptsYG/Storage/Plugins/CloudStorage.jslib
+  artifactKey: Guid(f493b425868e7fb47badc1c13c76a337) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/YandexGame/ScriptsYG/Storage/Plugins/CloudStorage.jslib using Guid(f493b425868e7fb47badc1c13c76a337) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ea6026b582c8e99873134144e17c94de') in 0.020672 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/YandexGame/ScriptsYG/Inside/ConfigYG.cs
+  artifactKey: Guid(2726b935d9a3f7d4fa7814a8c6be7f37) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/YandexGame/ScriptsYG/Inside/ConfigYG.cs using Guid(2726b935d9a3f7d4fa7814a8c6be7f37) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '17fc3648de4ac0cf083b469a74608910') in 0.014373 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Hertzole/Gold Player/Scripts/Editor/Helpers/GoldPlayerUIHelper.cs
+  artifactKey: Guid(c9faa02a6264e0542b9780a44bf0727a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hertzole/Gold Player/Scripts/Editor/Helpers/GoldPlayerUIHelper.cs using Guid(c9faa02a6264e0542b9780a44bf0727a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '33a157e4f98a221c5f3475237170604b') in 0.018262 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/YandexGame/ScriptsYG/Editor/Utils/DefineSymbols.cs
+  artifactKey: Guid(81e00845a563cb142aba772859940c67) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/YandexGame/ScriptsYG/Editor/Utils/DefineSymbols.cs using Guid(81e00845a563cb142aba772859940c67) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '389afe00c79e5a920a3ecb8d242b33cd') in 0.015742 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000091 seconds.
+  path: Assets/Hertzole/Gold Player/Scripts/Editor/Audio Extras/GoldPlayerAudioAnimatorTriggersEditor.cs
+  artifactKey: Guid(45be713eddd536b4b8f2b6b6a8fbf48b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hertzole/Gold Player/Scripts/Editor/Audio Extras/GoldPlayerAudioAnimatorTriggersEditor.cs using Guid(45be713eddd536b4b8f2b6b6a8fbf48b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5e3d9ed0a8816052c5c8ce426dab54a0') in 0.031917 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Hovl Studio/Magic effects pack/Textures/Trail67.png
+  artifactKey: Guid(c4f655f5d01f55547a23a546b58afd04) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hovl Studio/Magic effects pack/Textures/Trail67.png using Guid(c4f655f5d01f55547a23a546b58afd04) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e04232a4577b05c7ad672eae75e10272') in 0.037487 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/YandexGame/Prefabs/Banners/RBT6.prefab
+  artifactKey: Guid(39a0d2d92def7ea4fa400f143574ef64) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/YandexGame/Prefabs/Banners/RBT6.prefab using Guid(39a0d2d92def7ea4fa400f143574ef64) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4d58fe65872ccb2b84a3d3202321e4c7') in 0.100239 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Hertzole/Gold Player/Scripts/Editor/Interaction/GoldPlayerInteractableEditor.cs
+  artifactKey: Guid(8284dbfb47f27fd46a99bc0589cf8bcd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hertzole/Gold Player/Scripts/Editor/Interaction/GoldPlayerInteractableEditor.cs using Guid(8284dbfb47f27fd46a99bc0589cf8bcd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '18a125429bb26fea231962ddfde84f67') in 0.018555 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/YandexGame/Prefabs/Leaderboards/Simple LB Example.prefab
+  artifactKey: Guid(7e8446452335d9046a7294bf503167e3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/YandexGame/Prefabs/Leaderboards/Simple LB Example.prefab using Guid(7e8446452335d9046a7294bf503167e3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6fc73822edce184df0084a719efca31e') in 0.048736 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/YandexGame/ScriptsYG/Editor/Icons/Icon_ReviewYG.png
+  artifactKey: Guid(784e930cc8dc26a49b42086686c26616) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/YandexGame/ScriptsYG/Editor/Icons/Icon_ReviewYG.png using Guid(784e930cc8dc26a49b42086686c26616) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c3f58ebba5116d22085b4224a5fec101') in 0.032515 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/YandexGame/ScriptsYG/Language/Editor/TranslationTableEditorWindow.cs
+  artifactKey: Guid(ddad681fdebeeff45b49cc46dc9b2487) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/YandexGame/ScriptsYG/Language/Editor/TranslationTableEditorWindow.cs using Guid(ddad681fdebeeff45b49cc46dc9b2487) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '071289d4325a7c903b4a36e166ae2f18') in 0.017004 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/YandexGame/Prefabs/Payments/Purchase.prefab
+  artifactKey: Guid(85a12be5ffc39d349bf6dccb22596603) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/YandexGame/Prefabs/Payments/Purchase.prefab using Guid(85a12be5ffc39d349bf6dccb22596603) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd09668fca10af6422e9aeeb2bede8a16') in 0.029741 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 44
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Hertzole/Gold Player/Scripts/Runtime/Core/Modules/PlayerModule.cs
+  artifactKey: Guid(a120e1f3412bee541a47b59310dd3adc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hertzole/Gold Player/Scripts/Runtime/Core/Modules/PlayerModule.cs using Guid(a120e1f3412bee541a47b59310dd3adc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0be084be0da5b0365d62969496a9e636') in 0.011691 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000082 seconds.
+  path: Assets/Hertzole/Gold Player/Examples/Animator/Animations/Player/PlayerRunForward.anim
+  artifactKey: Guid(509cfb6dbee4587459a40e7d8ca969a1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hertzole/Gold Player/Examples/Animator/Animations/Player/PlayerRunForward.anim using Guid(509cfb6dbee4587459a40e7d8ca969a1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2267cfd1d7fe6e4bcdd4981cbd21c5e1') in 0.021078 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/YandexGame/ScriptsYG/Editor/Icons/Icon_ImageLoadYG.png
+  artifactKey: Guid(d75a9fd6790aa47499fe10d0e51442e1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/YandexGame/ScriptsYG/Editor/Icons/Icon_ImageLoadYG.png using Guid(d75a9fd6790aa47499fe10d0e51442e1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '668722406e80e44473effc8ae4e342f5') in 0.033238 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Hovl Studio/Magic effects pack/Prefabs/Slash effects/Stone slash.prefab
+  artifactKey: Guid(3407e378c048bb5438424b28c7740b48) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hovl Studio/Magic effects pack/Prefabs/Slash effects/Stone slash.prefab using Guid(3407e378c048bb5438424b28c7740b48) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ac16b2cce5cd8511dbd272415b18ccad') in 0.132422 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 22
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Hertzole/Gold Player/Examples/Animator/Animations/Player/PlayerWalkForward.anim
+  artifactKey: Guid(4911da3b6ca417647b5cc669c0ae1b80) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hertzole/Gold Player/Examples/Animator/Animations/Player/PlayerWalkForward.anim using Guid(4911da3b6ca417647b5cc669c0ae1b80) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5d6d30aa1ff9d7eea2f4459fc2cf341a') in 0.017787 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/YandexGame/ScriptsYG/Language/LanguageYG.cs
+  artifactKey: Guid(f34f36451b093ee4c83ad4aa5459d2ac) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/YandexGame/ScriptsYG/Language/LanguageYG.cs using Guid(f34f36451b093ee4c83ad4aa5459d2ac) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '54c78ecad20ca1c01c41278970ff8498') in 0.015005 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Hertzole/Gold Player/Scripts/Runtime/Core/Components/PlayerBehaviour.cs
+  artifactKey: Guid(124695ed1bd192142b245d479d24a340) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hertzole/Gold Player/Scripts/Runtime/Core/Components/PlayerBehaviour.cs using Guid(124695ed1bd192142b245d479d24a340) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9ea96b15d0f320c9fc8b7a5188e438d1') in 0.016114 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000101 seconds.
+  path: Assets/YandexGame/ScriptsYG/Initialization/InitYGAttribute.cs
+  artifactKey: Guid(162d6a9797796ef4ea7bc013aea8f557) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/YandexGame/ScriptsYG/Initialization/InitYGAttribute.cs using Guid(162d6a9797796ef4ea7bc013aea8f557) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5b96cfef8dba9cdcac577b8eb24a1332') in 0.015521 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000118 seconds.
+  path: Assets/Hovl Studio/Magic effects pack/Textures/Star.png
+  artifactKey: Guid(5cc658114b5abae49bce56d6c4ae3105) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hovl Studio/Magic effects pack/Textures/Star.png using Guid(5cc658114b5abae49bce56d6c4ae3105) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a1e703e80102f5b314e6dba982ddde55') in 0.032670 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/YandexGame/ScriptsYG/Authorization/Auth_yg.cs
+  artifactKey: Guid(1c551c2e4702fc3469b681e2c974921e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/YandexGame/ScriptsYG/Authorization/Auth_yg.cs using Guid(1c551c2e4702fc3469b681e2c974921e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cc8b53164129384e001513fcac31b589') in 0.014631 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Hertzole/Gold Player/Examples/Animator/AnimatorSettings.lighting
+  artifactKey: Guid(a4981c249c55908429d80a9a78160a65) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hertzole/Gold Player/Examples/Animator/AnimatorSettings.lighting using Guid(a4981c249c55908429d80a9a78160a65) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3b8376e350a8e36e5b8c06f080369c1a') in 0.049910 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/YandexGame/ScriptsYG/GameReadyAPI/Plugins/GameReadyAPI.jslib
+  artifactKey: Guid(357ae29480fcc144293d927269bda9e5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/YandexGame/ScriptsYG/GameReadyAPI/Plugins/GameReadyAPI.jslib using Guid(357ae29480fcc144293d927269bda9e5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '85f5e37880fb9a82508aa09460b3a8bd') in 0.015885 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000087 seconds.
+  path: Assets/YandexGame/ScriptsYG/Editor/Icons/Icon_GetPlayerYG.png
+  artifactKey: Guid(f7f61904b49993445b3e0385b563a10c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/YandexGame/ScriptsYG/Editor/Icons/Icon_GetPlayerYG.png using Guid(f7f61904b49993445b3e0385b563a10c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'bb986aaa9898e7bb24be632f7f76e8fc') in 0.029436 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Hovl Studio/Magic effects pack/Textures/Point1.png
+  artifactKey: Guid(640e93060c8b460449dc5d4f16193387) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hovl Studio/Magic effects pack/Textures/Point1.png using Guid(640e93060c8b460449dc5d4f16193387) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ee71fc18c4dcfd324f50b2b88e52ed41') in 0.039545 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
