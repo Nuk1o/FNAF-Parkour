@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class Fredy : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class Fredy : MonoBehaviour
         _distance = Vector3.Distance(_target.position, transform.position);
         if (_distance <= _agent.stoppingDistance)
         {
-            Debug.Log("GameOver");
+            SceneManager.LoadScene("Death");
         }
         _animator.SetBool("isRun", true);
         _agent.SetDestination(_target.position);
