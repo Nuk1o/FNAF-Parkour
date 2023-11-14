@@ -7,6 +7,7 @@ public class Fredy : MonoBehaviour
     [SerializeField] private Transform _target;
     [SerializeField] private NavMeshAgent _agent;
     [SerializeField] Animator _animator;
+    [SerializeField] private float _lookRadius;
 
     private float _distance;
     private void Start()
@@ -17,13 +18,26 @@ public class Fredy : MonoBehaviour
     private void Update()
     {
         _distance = Vector3.Distance(_target.position, transform.position);
-        if (_distance <= _agent.stoppingDistance)
+        if (_distance <= _lookRadius)
         {
-            SceneManager.LoadScene("Death");
+            if (_distance <= _agent.stoppingDistance)
+            {
+                SceneManager.LoadScene("Death");
+            }
+            _animator.SetBool("isRun", true);
+            _agent.SetDestination(_target.position);
+            LookTarget();
         }
-        _animator.SetBool("isRun", true);
-        _agent.SetDestination(_target.position);
-        LookTarget();
+        else
+        {
+            _animator.SetBool("isRun", false);
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, _lookRadius);
     }
 
     private void LookTarget()
