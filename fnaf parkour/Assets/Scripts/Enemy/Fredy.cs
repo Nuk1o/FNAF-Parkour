@@ -18,12 +18,14 @@ public class Fredy : MonoBehaviour
     private void Update()
     {
         _distance = Vector3.Distance(_target.position, transform.position);
+        if (_distance <= _agent.stoppingDistance)
+        {
+            Debug.Log("TEST");
+            SceneManager.LoadScene("Death");
+        }
+        
         if (_distance <= _lookRadius)
         {
-            if (_distance <= _agent.stoppingDistance)
-            {
-                SceneManager.LoadScene("Death");
-            }
             _animator.SetBool("isRun", true);
             _agent.SetDestination(_target.position);
             LookTarget();
