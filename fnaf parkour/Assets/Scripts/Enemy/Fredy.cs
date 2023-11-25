@@ -20,7 +20,6 @@ public class Fredy : MonoBehaviour
         _distance = Vector3.Distance(_target.position, transform.position);
         if (_distance <= _agent.stoppingDistance)
         {
-            Debug.Log("TEST");
             SceneManager.LoadScene("Death");
         }
         
