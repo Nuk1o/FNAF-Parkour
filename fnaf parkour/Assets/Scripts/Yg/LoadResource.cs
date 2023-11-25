@@ -7,13 +7,15 @@ using YG;
 public class LoadResource : MonoBehaviour
 {
     [Header("Level Set Menu")]
-    private int _energyInt, _lvlInt;
+    private int _energyInt;
+    private bool[] _levelsActive;
     private bool _isActive = true;
     [SerializeField] private Button[] _levels;
     [SerializeField] private Button _btnAD;
     [SerializeField] private Slider _energy;
     [SerializeField] private TMP_Text _energyTXT;
     [SerializeField] private GameObject _levelSet;
+    [SerializeField] private Sprite _levelActiveSprite;
 
     private void OnEnable()
     {
@@ -39,24 +41,22 @@ public class LoadResource : MonoBehaviour
         {
             _isActive = false;
             LevelSetActive();
-            Debug.Log("TESTTTTTTT");
         }
     }
 
     public void GetLoad()
     {
         _energyInt = YandexGame.savesData.energy;
-        _lvlInt = YandexGame.savesData.lvl;
+        _levelsActive = YandexGame.savesData.openLevels;
     }
 
     private void LevelSetActive()
     {
         if (_levelSet.activeInHierarchy)
         {
-            EnergySet();
             OpenLevel();
+            EnergySet();
             Debug.Log($"Энергия: {_energyInt}");
-            Debug.Log($"Уровень: {_lvlInt}");
         }
     }
     
@@ -67,6 +67,14 @@ public class LoadResource : MonoBehaviour
         if (_energy.value == 0)
         {
             _btnAD.gameObject.SetActive(true);
+            for (int i = 0; i < _levelsActive.Length; i++)
+            {
+                if (_levelsActive[i])
+                {
+                    _levels[i].interactable = false;
+                }
+            }
+            Debug.Log("Нет энергии");
         }
         else
         {
@@ -76,14 +84,21 @@ public class LoadResource : MonoBehaviour
 
     private void OpenLevel()
     {
-        for (int i = 1; i < _levels.Length; i++)
+        try
         {
-            if (i <= _lvlInt)
+            for (int i = 0; i < _levelsActive.Length; i++)
             {
-                _levels[i--].enabled = true;
+                if (_levelsActive[i])
+                {
+                    _levels[i].interactable = true;
+                    _levels[i].transform.gameObject.GetComponent<Image>().sprite = _levelActiveSprite;
+                }
             }
         }
+        catch
+        {
+            Debug.Log("Ошибка | OpenLevelButton");
+        }
+        
     }
-    
-    
 }

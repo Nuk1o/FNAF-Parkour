@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using YG;
 
 public class Teleport : MonoBehaviour
 {
@@ -9,7 +10,6 @@ public class Teleport : MonoBehaviour
     [SerializeField] private GameObject[] _gameGO;
     [SerializeField] private GameObject _canvas;
     private Button _closeBtn;
-
     private void Awake()
     {
         _closeBtn = _canvas.transform.GetChild(0).transform.gameObject.GetComponent<Button>();
@@ -19,6 +19,7 @@ public class Teleport : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            SaveData();
             foreach (var go in _gameGO)
             {
                 go.SetActive(false);
@@ -28,6 +29,29 @@ public class Teleport : MonoBehaviour
             Cursor.visible = true;
             _closeBtn.onClick.AddListener(delegate { ScenLoader("Menu"); });
         }
+    }
+
+    private void SaveData()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        string _sceneName = scene.name;
+        switch (_sceneName)
+        {
+            case "Maze1":
+                YandexGame.savesData.openLevels[1] = true;
+                break;
+            case "Maze2":
+                YandexGame.savesData.openLevels[2] = true;
+                break;
+            case "Maze3":
+                YandexGame.savesData.openLevels[3] = true;
+                break;
+        }
+        YandexGame.savesData.energy--;
+        
+
+        // Теперь остаётся сохранить данные
+        YandexGame.SaveProgress();
     }
 
     private void ScenLoader(string sceneName)
