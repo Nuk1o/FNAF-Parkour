@@ -1,11 +1,11 @@
-using Hertzole.GoldPlayer;
 using UnityEngine;
+using UnityEngine.UI;
 using YG;
 
-public class LoadingSettings : MonoBehaviour
+public class LoadSettingsMenu : MonoBehaviour
 {
-    [SerializeField] private AudioSource[] _audioSources;
-    [SerializeField] private GoldPlayerController _goldPlayerController;
+    [SerializeField] private Slider _audio;
+    [SerializeField] private Slider _sensivity;
     
     private float _sens, _vol;
     private void OnEnable() => YandexGame.GetDataEvent += GetData;
@@ -32,11 +32,7 @@ public class LoadingSettings : MonoBehaviour
 
     private void SetSettings()
     {
-        Debug.Log(_sens);
-        _goldPlayerController.Camera.MouseSensitivity = new Vector2(_sens,_sens);
-        foreach (var audio in _audioSources)
-        {
-            audio.volume = _vol;
-        }
+        _audio.value = _vol;
+        _sensivity.value = _sens;
     }
 }

@@ -1867,6 +1867,72 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1908423266}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &533495934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 533495936}
+  - component: {fileID: 533495935}
+  m_Layer: 0
+  m_Name: LoadingSettings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &533495935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533495934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 223d73b7722f51045867fbc25fc5b801, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioSources:
+  - {fileID: 118810528}
+  - {fileID: 2760723079416478976}
+  - {fileID: 2395260857534215492}
+  - {fileID: 384548329818105387}
+  - {fileID: 2073582638}
+  - {fileID: 1020531017}
+  - {fileID: 627896172}
+  - {fileID: 1654884163}
+  - {fileID: 1126880418}
+  - {fileID: 1293188600}
+  - {fileID: 1178025417}
+  - {fileID: 690295850}
+  - {fileID: 1907236053375537827}
+  - {fileID: 1409984946}
+  - {fileID: 1363429964}
+  - {fileID: 2042577438}
+  - {fileID: 2760723079416478976}
+  - {fileID: 7826234682744188154}
+  - {fileID: 7946020274667213059}
+  - {fileID: 2760723079416478976}
+  _goldPlayerController: {fileID: 6487986752082862185}
+--- !u!4 &533495936
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533495934}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1410, y: 178, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &560815537
 GameObject:
   m_ObjectHideFlags: 0
@@ -25106,7 +25172,7 @@ MonoBehaviour:
     rotateCameraOnly: 0
     invertXAxis: 0
     invertYAxis: 0
-    lookSensitivity: {x: 1, y: 1}
+    lookSensitivity: {x: 0.94, y: 1}
     lookDamping: 0
     minimumX: -65
     maximumX: 65
@@ -31280,3 +31346,4 @@ SceneRoots:
   - {fileID: 425049486}
   - {fileID: 730957846}
   - {fileID: 6037268352429386107}
+  - {fileID: 533495936}

@@ -1,5 +1,5 @@
 {
-    "idSave": 369,
+    "idSave": 375,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -11,5 +11,7 @@
         false,
         false
     ],
-    "energy": 5
+    "energy": 5,
+    "sensivity": 0.6787566542625427,
+    "volumeAudio": 0.14905910193920136
 }
