@@ -1,10 +1,16 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using YG;
 
 public class MenuYG : MonoBehaviour
 {
     [SerializeField] private TMP_Text _name;
+
+    [Space]
+    [Header("Settings")]
+    [SerializeField] private Slider _volume;
+    [SerializeField] private Slider _sensivity;
     public void AuthOn()
     {
         Debug.Log("Авторизация успешна");
@@ -23,5 +29,12 @@ public class MenuYG : MonoBehaviour
         {
             _name.text = "Пользователь";
         }
+    }
+
+    public void SaveSettings()
+    {
+        YandexGame.savesData.sensivity = _sensivity.value;
+        YandexGame.savesData.volumeAudio = _volume.value;
+        YandexGame.SaveProgress();
     }
 }

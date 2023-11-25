@@ -19,6 +19,8 @@ namespace YG
         // Ваши сохранения
 
         public int energy = 5;
+        public float sensivity = 1;
+        public float volumeAudio = 1;
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны
 
 
