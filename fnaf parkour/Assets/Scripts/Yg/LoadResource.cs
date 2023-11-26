@@ -55,8 +55,9 @@ public class LoadResource : MonoBehaviour
         if (_levelSet.activeInHierarchy)
         {
             OpenLevel();
-            //EnergySet();
+            EnergySet();
             Debug.Log($"Энергия: {_energyInt}");
+            Debug.Log(DateTime.Now);
         }
     }
     

@@ -14,8 +14,6 @@ public class DeathGame : MonoBehaviour
     {
         _buttonClose = _gameOverCanvas.transform.GetChild(0).GetComponent<Button>();
         _buttonClose.onClick.AddListener(delegate { ClickBtn(); });
-        YandexGame.savesData.energy--;
-        YandexGame.SaveProgress();
     }
 
     private void Update()

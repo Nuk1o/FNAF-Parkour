@@ -47,11 +47,6 @@ public class Teleport : MonoBehaviour
                 YandexGame.savesData.openLevels[3] = true;
                 break;
         }
-        YandexGame.savesData.energy--;
-        
-
-        // Теперь остаётся сохранить данные
-        YandexGame.SaveProgress();
     }
 
     private void ScenLoader(string sceneName)

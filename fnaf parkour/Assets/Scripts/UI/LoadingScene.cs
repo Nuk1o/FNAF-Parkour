@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using YG;
 
 public class LoadingScene : MonoBehaviour
 {
@@ -14,5 +15,7 @@ public class LoadingScene : MonoBehaviour
     public void SelectLevelLoading(Button _continue)
     {
         _continue.onClick.AddListener(delegate { SceneLoading(); });
+        YandexGame.savesData.energy--;
+        YandexGame.SaveProgress();
     }
 }
