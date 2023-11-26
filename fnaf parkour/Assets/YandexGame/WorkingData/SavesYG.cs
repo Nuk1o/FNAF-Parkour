@@ -22,7 +22,8 @@ namespace YG
         public int energy = 5;
         public float sensivity = 1;
         public float volumeAudio = 1;
-        public DateTime dateTimes;
+        public long dateTicks = 0;
+        public bool isPlay = false;
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны
 
 
@@ -30,7 +31,7 @@ namespace YG
         public SavesYG()
         {
             // Допустим, задать значения по умолчанию для отдельных элементов массива
-
+        
             openLevels[0] = true;
             openLevels[1] = false;
             openLevels[2] = false;

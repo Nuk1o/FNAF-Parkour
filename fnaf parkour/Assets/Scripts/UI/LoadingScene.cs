@@ -15,6 +15,7 @@ public class LoadingScene : MonoBehaviour
     public void SelectLevelLoading(Button _continue)
     {
         _continue.onClick.AddListener(delegate { SceneLoading(); });
+        YandexGame.savesData.isPlay = true;
         YandexGame.savesData.energy--;
         YandexGame.SaveProgress();
     }

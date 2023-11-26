@@ -9,7 +9,7 @@ public class LoadResource : MonoBehaviour
     [Header("Level Set Menu")]
     private int _energyInt;
     private bool[] _levelsActive;
-    private bool _isActive = true;
+    public bool _isActive = true;
     [SerializeField] private Button[] _levels;
     [SerializeField] private Button _btnAD;
     [SerializeField] private Slider _energy;
@@ -50,7 +50,7 @@ public class LoadResource : MonoBehaviour
         _levelsActive = YandexGame.savesData.openLevels;
     }
 
-    private void LevelSetActive()
+    public void LevelSetActive()
     {
         if (_levelSet.activeInHierarchy)
         {

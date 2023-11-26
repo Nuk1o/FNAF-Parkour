@@ -28,6 +28,8 @@ public class Teleport : MonoBehaviour
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
             _closeBtn.onClick.AddListener(delegate { ScenLoader("Menu"); });
+            YandexGame.savesData.isPlay = false;
+            YandexGame.SaveProgress();
         }
     }
 
