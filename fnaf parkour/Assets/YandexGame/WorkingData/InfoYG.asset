@@ -186,12 +186,37 @@ MonoBehaviour:
     isInvertSortOrder: 1
     decimalOffset: 2
     type: time
-    players:
-    - rank: 1
-      name: "\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C"
-      score: 1000
-      photo: https://justplaygames.ru/public/icon_player.png
-      uniqueID: 000
+    players: []
+    thisPlayer:
+      rank: 1
+      score: 0
+  - technoName: TimeToCompleteLevel2
+    entries: Level 1 Leaderboard
+    isDefault: 0
+    isInvertSortOrder: 1
+    decimalOffset: 2
+    type: time
+    players: []
+    thisPlayer:
+      rank: 1
+      score: 0
+  - technoName: TimeToCompleteLevel3
+    entries: Level 1 Leaderboard
+    isDefault: 0
+    isInvertSortOrder: 1
+    decimalOffset: 2
+    type: time
+    players: []
+    thisPlayer:
+      rank: 1
+      score: 0
+  - technoName: TimeToCompleteLevel4
+    entries: Level 1 Leaderboard
+    isDefault: 0
+    isInvertSortOrder: 1
+    decimalOffset: 2
+    type: time
+    players: []
     thisPlayer:
       rank: 1
       score: 0
@@ -231,6 +256,35 @@ MonoBehaviour:
     de: 0
     hi: 0
   fonts:
+    defaultFont: []
+    ru: []
+    en: []
+    tr: []
+    az: []
+    be: []
+    he: []
+    hy: []
+    ka: []
+    et: []
+    fr: []
+    kk: []
+    ky: []
+    lt: []
+    lv: []
+    ro: []
+    tg: []
+    tk: []
+    uk: []
+    uz: []
+    es: []
+    pt: []
+    ar: []
+    id: []
+    ja: []
+    it: []
+    de: []
+    hi: []
+  fontsTMP:
     defaultFont: []
     ru: []
     en: []
