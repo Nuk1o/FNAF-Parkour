@@ -270,6 +270,11 @@ MonoBehaviour:
   - {fileID: 7946020274667213059}
   - {fileID: 7826234682744188154}
   _goldPlayerController: {fileID: 6487986752082862185}
+  _audioClips:
+  - {fileID: 8300000, guid: 44e59b73420f0e64fb30e755c49b3823, type: 3}
+  - {fileID: 8300000, guid: 62e6bf700540ea9478b91b33afa85e7e, type: 3}
+  - {fileID: 8300000, guid: bbe4ed33245f5804db42ff8c43d75412, type: 3}
+  - {fileID: 8300000, guid: 1e5761292ed025241bdb02ff49c552dd, type: 3}
 --- !u!4 &50964416
 Transform:
   m_ObjectHideFlags: 0

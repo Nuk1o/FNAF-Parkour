@@ -44,6 +44,7 @@ public class Teleport : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         string _sceneName = scene.name;
         Debug.Log(_timer);
+        YandexGame.RequestAuth();
         switch (_sceneName)
         {
             case "Maze1":

@@ -186,7 +186,12 @@ MonoBehaviour:
     isInvertSortOrder: 1
     decimalOffset: 2
     type: time
-    players: []
+    players:
+    - rank: 1
+      name: Test
+      score: 1000
+      photo: https://justplaygames.ru/public/icon_player.png
+      uniqueID: 000
     thisPlayer:
       rank: 1
       score: 0
