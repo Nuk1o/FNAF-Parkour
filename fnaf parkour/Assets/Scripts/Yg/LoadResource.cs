@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -34,13 +35,20 @@ public class LoadResource : MonoBehaviour
             GetLoad();
         }
     }
-
     private void Update()
     {
-        if (_levelSet.activeSelf && _isActive)
+        if (_isActive)
         {
             _isActive = false;
             LevelSetActive();
+        }
+        if (_energy.value==0)
+        {
+            _btnAD.gameObject.SetActive(true);
+        }
+        else if (_energy.value>0)
+        {
+            _isActive = true;
         }
     }
 
@@ -56,15 +64,15 @@ public class LoadResource : MonoBehaviour
         {
             OpenLevel();
             EnergySet();
-            Debug.Log($"Энергия: {_energyInt}");
-            Debug.Log(DateTime.Now);
+            // Debug.Log($"Энергия: {_energyInt}");
+            // Debug.Log(DateTime.Now);
         }
     }
     
     private void EnergySet()
     {
-        _energy.value = _energyInt;
-        _energyTXT.text = $"{_energyInt}/5";
+        // _energy.value = _energyInt;
+        // _energyTXT.text = $"{_energyInt}/5";
         if (_energy.value == 0)
         {
             _btnAD.gameObject.SetActive(true);
@@ -100,6 +108,5 @@ public class LoadResource : MonoBehaviour
         {
             Debug.Log("Ошибка | OpenLevelButton");
         }
-        
     }
 }

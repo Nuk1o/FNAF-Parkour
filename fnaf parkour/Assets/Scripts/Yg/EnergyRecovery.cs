@@ -1,13 +1,11 @@
 using System;
 using System.Collections;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using YG;
 
 public class EnergyRecovery : MonoBehaviour
 {
-    private int _minutes = 10;
+    private int _minutesHold = 1;
     private DateTime _dateTimeEnergy;
     public static EnergyRecovery instance;
     public static GameObject energyRecoveryScript;
@@ -57,15 +55,15 @@ public class EnergyRecovery : MonoBehaviour
         {
             Debug.Log("Тики: "+YandexGame.savesData.dateTicks);
             YandexGame.savesData.dateTicks = new DateTime(DateTime.Now.Year,DateTime.Now.Month,DateTime.Now.Day,
-                DateTime.Now.Hour,DateTime.Now.Minute+3,0).Ticks;
+                DateTime.Now.Hour,DateTime.Now.Minute,0).AddMinutes(_minutesHold).Ticks;
             Debug.Log("Новые тики: "+YandexGame.savesData.dateTicks);
             YandexGame.SaveProgress();
             Debug.Log("Пошло начисление энергии");
         }
         else
         {
-            Debug.Log("Тики: "+YandexGame.savesData.dateTicks);
-            Debug.Log("Тики сейчас: "+DateTime.Now.Ticks);
+            Debug.Log("Время: "+ new DateTime(YandexGame.savesData.dateTicks));
+            Debug.Log("Время сейчас: "+new DateTime(DateTime.Now.Ticks));
             if (DateTime.Now.Ticks>=YandexGame.savesData.dateTicks && YandexGame.savesData.energy < 5)
             {
                 int _energy = YandexGame.savesData.energy;

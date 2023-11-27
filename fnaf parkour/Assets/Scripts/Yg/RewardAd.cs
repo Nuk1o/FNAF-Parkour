@@ -1,7 +1,5 @@
 using UnityEngine;
 using YG;
-using TMPro;
-using UnityEngine.UI;
 
 public class RewardAd : MonoBehaviour
 {
