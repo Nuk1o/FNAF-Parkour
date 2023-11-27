@@ -32,6 +32,8 @@ public class LoadingDataPlayer : MonoBehaviour
                 
                 yield return new WaitForSeconds(3);
             }
+
+            yield return new WaitForSeconds(3);
         }
     }
     void DebugData()
