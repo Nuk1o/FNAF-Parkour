@@ -11,6 +11,8 @@ public class LoadingDataPlayer : MonoBehaviour
     private void OnDisable() => YandexGame.GetDataEvent -= DebugData;
     private void Start()
     {
+        DebugData();
+        NewName();
         if (YandexGame.SDKEnabled)
         {
             StartCoroutine(CheckAuth());

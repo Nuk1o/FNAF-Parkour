@@ -16,12 +16,8 @@ public class LoadingSettings : MonoBehaviour
         if (YandexGame.SDKEnabled == true)
         {
             GetData();
+            SetSettings();
         }
-    }
-
-    private void Start()
-    {
-        SetSettings();
     }
 
     public void GetData()
@@ -38,5 +34,11 @@ public class LoadingSettings : MonoBehaviour
         {
             audio.volume = _vol;
         }
+        AudioItem volumeAudioItem = new AudioItem(true, true, 1f, 0.9f, 1.1f, true, _vol);
+        _goldPlayerController.Audio.Jumping = volumeAudioItem;
+        _goldPlayerController.Audio.Landing = volumeAudioItem;
+        _goldPlayerController.Audio.WalkFootsteps = volumeAudioItem;
+        _goldPlayerController.Audio.CrouchFootsteps = volumeAudioItem;
+        _goldPlayerController.Audio.RunFootsteps = volumeAudioItem;
     }
 }
