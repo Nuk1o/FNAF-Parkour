@@ -77,6 +77,7 @@ public class Teleport : MonoBehaviour
             YandexGame.GetLeaderboard(_nameLB,20, 3, 3, "Small");
             LBData _lbData = new LBData();
             YandexGame.onGetLeaderboard.Invoke(_lbData);
+            // YandexGame.onGetLeaderboard.Invoke(_lbData);
             int uid = Convert.ToInt32(YandexGame.playerId);
             int Userscore = _lbData.players[uid].score;
             if (Userscore<_timer)
