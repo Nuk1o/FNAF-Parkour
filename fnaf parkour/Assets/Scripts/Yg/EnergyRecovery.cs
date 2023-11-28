@@ -5,7 +5,7 @@ using YG;
 
 public class EnergyRecovery : MonoBehaviour
 {
-    private int _minutesHold = 1;
+    private int _minutesHold = 15;
     private DateTime _dateTimeEnergy;
     public static EnergyRecovery instance;
     public static GameObject energyRecoveryScript;

@@ -1,13 +1,16 @@
+using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using YG;
+using YG.Utils.LB;
 
 public class Teleport : MonoBehaviour
 {
-    [SerializeField] private string _nameScene;
     [SerializeField] private GameObject[] _gameGO;
     [SerializeField] private GameObject _canvas;
+    [SerializeField] private TMP_Text _timerText;
     private Button _closeBtn;
     private float _timer;
     private void Awake()
@@ -48,20 +51,42 @@ public class Teleport : MonoBehaviour
         switch (_sceneName)
         {
             case "Maze1":
-                YandexGame.NewLBScoreTimeConvert("TimeToCompleteLevel1", _timer);
+                CheckRecord("TimeToCompleteLevel1");
                 YandexGame.savesData.openLevels[1] = true;
                 break;
             case "Maze2":
-                YandexGame.NewLBScoreTimeConvert("TimeToCompleteLevel2", _timer);
+                CheckRecord("TimeToCompleteLevel2");
                 YandexGame.savesData.openLevels[2] = true;
                 break;
             case "Maze3":
-                YandexGame.NewLBScoreTimeConvert("TimeToCompleteLevel3", _timer);
+                CheckRecord("TimeToCompleteLevel3");
                 YandexGame.savesData.openLevels[3] = true;
                 break;
             case "Maze4":
-                YandexGame.NewLBScoreTimeConvert("TimeToCompleteLevel4", _timer);
+                CheckRecord("TimeToCompleteLevel4");
                 break;
+        }
+    }
+
+    private void CheckRecord(string _nameLB)
+    {
+        string _timeStr = _timer.ToString(@"hh\:mm\:ss\:fff");
+        _timerText.text = $"{_timeStr}";
+        if (YandexGame.initializedLB)
+        {
+            YandexGame.GetLeaderboard(_nameLB,20, 3, 3, "Small");
+            LBData _lbData = new LBData();
+            YandexGame.onGetLeaderboard.Invoke(_lbData);
+            int uid = Convert.ToInt32(YandexGame.playerId);
+            int Userscore = _lbData.players[uid].score;
+            if (Userscore<_timer)
+            {
+                YandexGame.NewLBScoreTimeConvert(_nameLB, _timer);
+            }
+        }
+        else
+        {
+            YandexGame.NewLBScoreTimeConvert(_nameLB, _timer);
         }
     }
     
