@@ -16,6 +16,7 @@ namespace YG
         public int money = 1;                       // Можно задать полям значения по умолчанию
         public string newPlayerName = "Hello!";
         public bool[] openLevels = new bool[4];
+        public int[] recordsLevels = new int[4];
 
         // Ваши сохранения
 
@@ -36,6 +37,11 @@ namespace YG
             openLevels[1] = false;
             openLevels[2] = false;
             openLevels[3] = false;
+
+            recordsLevels[0] = 0;
+            recordsLevels[1] = 0;
+            recordsLevels[2] = 0;
+            recordsLevels[3] = 0;
         }
     }
 }

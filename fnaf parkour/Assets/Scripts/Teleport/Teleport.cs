@@ -1,10 +1,10 @@
 using System;
+using System.Globalization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using YG;
-using YG.Utils.LB;
 
 public class Teleport : MonoBehaviour
 {
@@ -51,39 +51,39 @@ public class Teleport : MonoBehaviour
         switch (_sceneName)
         {
             case "Maze1":
-                CheckRecord("TimeToCompleteLevel1");
+                CheckRecord("TimeToCompleteLevel1",0);
                 YandexGame.savesData.openLevels[1] = true;
                 break;
             case "Maze2":
-                CheckRecord("TimeToCompleteLevel2");
+                CheckRecord("TimeToCompleteLevel2",1);
                 YandexGame.savesData.openLevels[2] = true;
                 break;
             case "Maze3":
-                CheckRecord("TimeToCompleteLevel3");
+                CheckRecord("TimeToCompleteLevel3",2);
                 YandexGame.savesData.openLevels[3] = true;
                 break;
             case "Maze4":
-                CheckRecord("TimeToCompleteLevel4");
+                CheckRecord("TimeToCompleteLevel4",3);
                 break;
         }
     }
 
-    private void CheckRecord(string _nameLB)
+    private void CheckRecord(string _nameLB, int _levelID)
     {
-        string _timeStr = _timer.ToString(@"hh\:mm\:ss\:fff");
-        _timerText.text = $"{_timeStr}";
+        Debug.Log(_timer);
+        Debug.Log(YandexGame.savesData.recordsLevels[_levelID]);
+        _timerText.text = $"Время: {_timer.ToString()}";
         if (YandexGame.initializedLB)
         {
-            YandexGame.GetLeaderboard(_nameLB,20, 3, 3, "Small");
-            LBData _lbData = new LBData();
-            YandexGame.onGetLeaderboard.Invoke(_lbData);
-            // YandexGame.onGetLeaderboard.Invoke(_lbData);
-            int uid = Convert.ToInt32(YandexGame.playerId);
-            int Userscore = _lbData.players[uid].score;
-            if (Userscore<_timer)
+            if (YandexGame.savesData.recordsLevels[_levelID] == 0)
             {
                 YandexGame.NewLBScoreTimeConvert(_nameLB, _timer);
             }
+            else if(YandexGame.savesData.recordsLevels[_levelID] > _timer)
+            {
+                YandexGame.NewLBScoreTimeConvert(_nameLB, _timer);
+            }
+            YandexGame.GetLeaderboard(_nameLB,20, 3, 3, "Small");
         }
         else
         {

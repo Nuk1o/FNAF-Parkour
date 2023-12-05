@@ -1,5 +1,5 @@
 {
-    "idSave": 586,
+    "idSave": 625,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": true,
@@ -7,13 +7,19 @@
     "newPlayerName": "Hello!",
     "openLevels": [
         true,
-        false,
+        true,
         false,
         false
+    ],
+    "recordsLevels": [
+        0,
+        0,
+        0,
+        0
     ],
     "energy": 0,
     "sensivity": 1.0,
     "volumeAudio": 0.7900110483169556,
-    "dateTicks": 0,
-    "isPlay": true
+    "dateTicks": 638374065000000000,
+    "isPlay": false
 }
