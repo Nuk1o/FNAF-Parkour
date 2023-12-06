@@ -35,7 +35,7 @@ public class LoadingSceneGame : MonoBehaviour
         while (!_async_operation.isDone)
         {
             _loadingSlider.value = Mathf.Clamp01(_async_operation.progress / 0.9f);
-            _loadingText.text = $"Загрузка ... {(_loadingSlider.value * 100).ToString("0")}%";
+            _loadingText.text = $"{(_loadingSlider.value * 100).ToString("0")}%";
             yield return true;
         }
     }

@@ -72,7 +72,7 @@ public class Teleport : MonoBehaviour
     {
         Debug.Log(_timer);
         Debug.Log(YandexGame.savesData.recordsLevels[_levelID]);
-        _timerText.text = $"Время: {_timer.ToString()}";
+        _timerText.text = $"{_timer.ToString()}";
         if (YandexGame.initializedLB)
         {
             if (YandexGame.savesData.recordsLevels[_levelID] == 0)

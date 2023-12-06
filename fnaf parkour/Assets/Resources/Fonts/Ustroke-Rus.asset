@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: Ustroke-Regular SDF
+  m_Name: Ustroke-Rus
   m_EditorClassIdentifier: 
-  hashCode: 1959200839
+  hashCode: 912039544
   material: {fileID: 4840907848469192715}
-  materialHashCode: 817980935
+  materialHashCode: -1722748456
   m_Version: 1.1.0
   m_SourceFontFileGUID: a1e2914ef49d0d84a8fde76d53367bf5
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: a1e2914ef49d0d84a8fde76d53367bf5, type: 3}
