@@ -7,6 +7,7 @@ public class LoadingSettings : MonoBehaviour
     [SerializeField] private AudioSource[] _audioSources;
     [SerializeField] private GoldPlayerController _goldPlayerController;
     [SerializeField] private AudioClip[] _audioClips;
+    [SerializeField] private GameObject _mobileController;
     
     private float _sens, _vol;
     private void OnEnable() => YandexGame.GetDataEvent += GetData;
@@ -29,6 +30,14 @@ public class LoadingSettings : MonoBehaviour
 
     private void SetSettings()
     {
+        Debug.Log(YandexGame.EnvironmentData.isMobile);
+        if (YandexGame.EnvironmentData.isMobile)
+        {
+            _goldPlayerController.Camera.ShouldLockCursor = false;
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+            _mobileController.SetActive(true);
+        }
         Debug.Log(_sens);
         _goldPlayerController.Camera.MouseSensitivity = new Vector2(_sens,_sens);
         foreach (var audio in _audioSources)
@@ -39,6 +48,5 @@ public class LoadingSettings : MonoBehaviour
         _goldPlayerController.Audio.WalkFootsteps = volumeAudioItem;
         _goldPlayerController.Audio.CrouchFootsteps = volumeAudioItem;
         _goldPlayerController.Audio.RunFootsteps = volumeAudioItem;
-        
     }
 }
