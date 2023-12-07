@@ -28,19 +28,19 @@ public partial class @MobileController: IInputActionCollection2, IDisposable
             ""id"": ""d2adef17-4290-4f3c-a998-845459c51035"",
             ""actions"": [
                 {
-                    ""name"": ""LookMobile"",
+                    ""name"": ""Move"",
                     ""type"": ""Value"",
-                    ""id"": ""16d5e48f-4b8a-4354-ab84-4a86b7be35f3"",
-                    ""expectedControlType"": ""Axis"",
+                    ""id"": ""5d3f1d44-d3a3-402e-95e1-f6854fd5ad7e"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Move"",
+                    ""name"": ""Look"",
                     ""type"": ""Value"",
-                    ""id"": ""12f5bdae-92c0-468d-96b4-ffc4e0c6c059"",
-                    ""expectedControlType"": ""Axis"",
+                    ""id"": ""c2a857c1-ea0b-45c2-a2c2-3c181fad2599"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -49,52 +49,35 @@ public partial class @MobileController: IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""cfc2e3fd-7433-4e89-915c-17e793445f82"",
-                    ""path"": ""<Touchscreen>/delta/x"",
-                    ""interactions"": """",
-                    ""processors"": ""AxisDeadzone"",
-                    ""groups"": ""Touch"",
-                    ""action"": ""LookMobile"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""ce855c28-f148-43a7-9b46-da44cc487e44"",
-                    ""path"": ""<Touchscreen>/delta/y"",
-                    ""interactions"": """",
-                    ""processors"": ""AxisDeadzone"",
-                    ""groups"": ""Touch"",
-                    ""action"": ""LookMobile"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""9c91fb3a-ad6c-4fe7-b066-72c0efe6348d"",
-                    ""path"": ""<Gamepad>/leftStick/left"",
+                    ""id"": ""d4450d00-9d72-4c5e-a914-f31afaf48625"",
+                    ""path"": ""<Gamepad>/leftStick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dc6b7352-1878-4ee0-86c8-114a187e623f"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
     ],
-    ""controlSchemes"": [
-        {
-            ""name"": ""Touch"",
-            ""bindingGroup"": ""Touch"",
-            ""devices"": []
-        }
-    ]
+    ""controlSchemes"": []
 }");
         // MobileCameraController
         m_MobileCameraController = asset.FindActionMap("MobileCameraController", throwIfNotFound: true);
-        m_MobileCameraController_LookMobile = m_MobileCameraController.FindAction("LookMobile", throwIfNotFound: true);
         m_MobileCameraController_Move = m_MobileCameraController.FindAction("Move", throwIfNotFound: true);
+        m_MobileCameraController_Look = m_MobileCameraController.FindAction("Look", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -156,14 +139,14 @@ public partial class @MobileController: IInputActionCollection2, IDisposable
     // MobileCameraController
     private readonly InputActionMap m_MobileCameraController;
     private List<IMobileCameraControllerActions> m_MobileCameraControllerActionsCallbackInterfaces = new List<IMobileCameraControllerActions>();
-    private readonly InputAction m_MobileCameraController_LookMobile;
     private readonly InputAction m_MobileCameraController_Move;
+    private readonly InputAction m_MobileCameraController_Look;
     public struct MobileCameraControllerActions
     {
         private @MobileController m_Wrapper;
         public MobileCameraControllerActions(@MobileController wrapper) { m_Wrapper = wrapper; }
-        public InputAction @LookMobile => m_Wrapper.m_MobileCameraController_LookMobile;
         public InputAction @Move => m_Wrapper.m_MobileCameraController_Move;
+        public InputAction @Look => m_Wrapper.m_MobileCameraController_Look;
         public InputActionMap Get() { return m_Wrapper.m_MobileCameraController; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -173,22 +156,22 @@ public partial class @MobileController: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_MobileCameraControllerActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_MobileCameraControllerActionsCallbackInterfaces.Add(instance);
-            @LookMobile.started += instance.OnLookMobile;
-            @LookMobile.performed += instance.OnLookMobile;
-            @LookMobile.canceled += instance.OnLookMobile;
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
+            @Look.started += instance.OnLook;
+            @Look.performed += instance.OnLook;
+            @Look.canceled += instance.OnLook;
         }
 
         private void UnregisterCallbacks(IMobileCameraControllerActions instance)
         {
-            @LookMobile.started -= instance.OnLookMobile;
-            @LookMobile.performed -= instance.OnLookMobile;
-            @LookMobile.canceled -= instance.OnLookMobile;
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
+            @Look.started -= instance.OnLook;
+            @Look.performed -= instance.OnLook;
+            @Look.canceled -= instance.OnLook;
         }
 
         public void RemoveCallbacks(IMobileCameraControllerActions instance)
@@ -206,18 +189,9 @@ public partial class @MobileController: IInputActionCollection2, IDisposable
         }
     }
     public MobileCameraControllerActions @MobileCameraController => new MobileCameraControllerActions(this);
-    private int m_TouchSchemeIndex = -1;
-    public InputControlScheme TouchScheme
-    {
-        get
-        {
-            if (m_TouchSchemeIndex == -1) m_TouchSchemeIndex = asset.FindControlSchemeIndex("Touch");
-            return asset.controlSchemes[m_TouchSchemeIndex];
-        }
-    }
     public interface IMobileCameraControllerActions
     {
-        void OnLookMobile(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
+        void OnLook(InputAction.CallbackContext context);
     }
 }

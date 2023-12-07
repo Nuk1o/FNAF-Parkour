@@ -1,14 +1,27 @@
 using Hertzole.GoldPlayer;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(PlayerInput))]
 public class JoystickPlayerMobile : MonoBehaviour
 {
-    [SerializeField] private VariableJoystick _variableJoystick;
     [SerializeField] private GoldPlayerController _goldPlayerController;
-    
-    private void FixedUpdate()
+    [SerializeField] private PlayerInput _playerInput;
+
+    private void Update()
     {
-        Vector3 direction = (Vector3.forward * _variableJoystick.Vertical + Vector3.right * _variableJoystick.Horizontal)*Time.deltaTime*_goldPlayerController.Movement.WalkingSpeeds.ForwardSpeed;
-        _goldPlayerController.Controller.Move(direction);
+        MovePlayer();
+    }
+    
+    private void MovePlayer()
+    {
+        if (_playerInput.actions["Move"].triggered)
+        {
+            Debug.Log("Walk");
+            Vector2 move = _playerInput.actions["Move"].ReadValue<Vector2>();
+            Debug.Log("Walk | " + move);
+            Vector3 direction = (Vector3.forward * move.y + Vector3.right * move.x)*Time.deltaTime*_goldPlayerController.Movement.WalkingSpeeds.ForwardSpeed;
+            _goldPlayerController.Controller.Move(direction);
+        }
     }
 }
