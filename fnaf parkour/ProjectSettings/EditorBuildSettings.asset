@@ -23,4 +23,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Maze4.unity
     guid: 34d1445a547bcf747aa3010e88e927ee
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: aa4d1763cb3b70d43ab8ad0d7f6725ba, type: 2}
