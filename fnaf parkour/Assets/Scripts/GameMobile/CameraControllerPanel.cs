@@ -13,22 +13,32 @@ public class CameraControllerPanel : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera _cinemachineVirtualCamera;
     [SerializeField] private GoldPlayerController _goldPlayerController;
     [SerializeField] private PlayerInput _playerInput;
-    
+    [SerializeField] private GameObject _CameraHead;
+    [SerializeField] private CinemachineInputProvider _cinemachineInput;
+    private float _turn;
+    private Vector3 _targetHeadAngles;
+    private Vector3 _targetBodyAngles;
     private void Start()
     {
         _isMobile = YandexGame.EnvironmentData.isMobile;
         if (_isMobile)
         {
-            _cinemachineVirtualCamera.gameObject.SetActive(true);
-            _cinemachineVirtualCamera.enabled = true;
-            _cinemachineVirtualCamera.IsLiveChild(_cinemachineVirtualCamera, true);
-            _goldPlayerController.Camera.LookInput = "MobileLook";
-            _mobileController = new MobileController();
-            _mobileController.MobileCameraController.Enable();
+            _CameraHead.SetActive(true);
+
+            _goldPlayerController.Camera.CameraHead = null;
+            _goldPlayerController.Camera.TargetVirtualCamera = null;
+            _goldPlayerController.Camera.CanLookAround = false;
+            _goldPlayerController.HeadBob.EnableBob = false;
+
+            _goldPlayerController.gameObject.transform.eulerAngles = new Vector3(0, 10, 0);
+            
+            _targetHeadAngles = _CameraHead.transform.eulerAngles;
+            _targetBodyAngles = _goldPlayerController.gameObject.transform.eulerAngles;
             _cinemachineVirtualCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = 0.8f;
             _cinemachineVirtualCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = 0.8f;
             _cinemachineVirtualCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_InputAxisName = "";
             _cinemachineVirtualCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_InputAxisName = "";
+            _goldPlayerController.Camera.LookInput = "MobileLook";
         }
         else
         {
@@ -37,81 +47,37 @@ public class CameraControllerPanel : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         LookPlayer();
     }
 
     private void LookPlayer()
     {
-        if (_playerInput.actions["Look"].triggered)
-        {
-            Debug.Log("look");
-            Vector2 _lookVector2 = _playerInput.actions["Look"].ReadValue<Vector2>();
-            Debug.Log("look | "+_lookVector2);
-            _cinemachineVirtualCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_InputAxisValue = _lookVector2.x;
-            _cinemachineVirtualCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_InputAxisValue = _lookVector2.y;
-        }
-        else
-        {
-            _cinemachineVirtualCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_InputAxisValue = 0;
-            _cinemachineVirtualCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_InputAxisValue = 0;
-        }
+        Vector2 _lookVector2 = _playerInput.actions["Look"].ReadValue<Vector2>();
+        Debug.Log(_lookVector2);
+        // Apply the input and mouse sensitivity.
+        _targetHeadAngles.x -= _lookVector2.y * 0.8f;
+        _targetBodyAngles.y += _lookVector2.x * 0.8f;
+        
+        _goldPlayerController.gameObject.transform.eulerAngles = _targetBodyAngles;
+        _CameraHead.transform.eulerAngles = _targetHeadAngles;
+        Debug.Log(_targetHeadAngles.x);
+        Debug.Log(_targetBodyAngles.y);
+
+        // Clamp the head angle.
+        _targetHeadAngles.x = Mathf.Clamp(_targetHeadAngles.x, -65, 65);
+        _targetBodyAngles.y = Mathf.Clamp(_targetBodyAngles.y, -90, 90);
+
+        // Smooth the movement.
+        //followHeadAngles = Vector3.SmoothDamp(followHeadAngles, targetHeadAngles, ref followHeadVelocity, lookDamping, Mathf.Infinity, Time.unscaledDeltaTime);
+        //followBodyAngles = Vector3.SmoothDamp(followBodyAngles, targetBodyAngles, ref followBodyVelocity, lookDamping, Mathf.Infinity, Time.unscaledDeltaTime);
+        //
+        // Debug.Log("look");
+        //
+        // Debug.Log("look | "+_lookVector2);
+        // _cinemachineVirtualCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_InputAxisValue = _lookVector2.x;
+        // _cinemachineVirtualCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_InputAxisValue = _lookVector2.y;
     }
-    // private void Start()
-    // {
-    //     _isMobile = YandexGame.EnvironmentData.isMobile;
-    //     if (_isMobile)
-    //     {
-    //         _cinemachineVirtualCamera.gameObject.SetActive(true);
-    //         _cinemachineVirtualCamera.enabled = true;
-    //         _cinemachineVirtualCamera.IsLiveChild(_cinemachineVirtualCamera, true);
-    //         _goldPlayerController.Camera.LookInput = "MobileLook";
-    //         _mobileController = new MobileController();
-    //         _mobileController.MobileCameraController.Enable();
-    //         _cinemachineVirtualCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = 0.8f;
-    //         _cinemachineVirtualCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = 0.8f;
-    //         _cinemachineVirtualCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_InputAxisName = "";
-    //         _cinemachineVirtualCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_InputAxisName = "";
-    //     }
-    //     else
-    //     {
-    //         _cinemachineVirtualCamera.gameObject.SetActive(false);
-    //         _goldPlayerController.Camera.LookInput = "Look";
-    //     }
-    // }
-    //
-    // public void OnPointerDown(PointerEventData eventData)
-    // {
-    //     
-    //     if(eventData.pointerCurrentRaycast.gameObject == gameObject)
-    //     {
-    //         _isPressed = true;
-    //         _mobileController.MobileCameraController.LookMobile.performed += PlayerLook;
-    //     }
-    // }
-    //
-    // public void OnPointerUp(PointerEventData eventData)
-    // {
-    //     _mobileController.MobileCameraController.LookMobile.performed -= PlayerLook;
-    //     _isPressed = false;
-    //     _cinemachineVirtualCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_InputAxisValue = 0;
-    //     _cinemachineVirtualCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_InputAxisValue = 0;
-    // }
-    //
-    // private void PlayerLook(InputAction.CallbackContext context)
-    // {
-    //     Debug.Log(context);
-    //     Debug.Log(context.action);
-    //     Debug.Log(context.control);
-    //     Debug.Log(context.ReadValue<float>());
-    //     if (_mobileController.MobileCameraController.LookMobile.activeControl.name == "x")
-    //     {
-    //         _cinemachineVirtualCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_InputAxisValue = context.ReadValue<float>();
-    //     }
-    //     else if(_mobileController.MobileCameraController.LookMobile.activeControl.name == "y")
-    //     {
-    //         _cinemachineVirtualCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_InputAxisValue = context.ReadValue<float>();
-    //     }
-    // }
+
 }

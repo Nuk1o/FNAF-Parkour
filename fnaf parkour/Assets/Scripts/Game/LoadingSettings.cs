@@ -8,6 +8,8 @@ public class LoadingSettings : MonoBehaviour
     [SerializeField] private GoldPlayerController _goldPlayerController;
     [SerializeField] private AudioClip[] _audioClips;
     [SerializeField] private GameObject _mobileController;
+    [SerializeField] private GameObject _mobilePlayer;
+    [SerializeField] private GameObject _mainCamera;
     
     private float _sens, _vol;
     private void OnEnable() => YandexGame.GetDataEvent += GetData;
@@ -33,20 +35,25 @@ public class LoadingSettings : MonoBehaviour
         Debug.Log(YandexGame.EnvironmentData.isMobile);
         if (YandexGame.EnvironmentData.isMobile)
         {
-            _goldPlayerController.Camera.ShouldLockCursor = false;
+            _goldPlayerController.gameObject.SetActive(false);
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
             _mobileController.SetActive(true);
+            _mobilePlayer.SetActive(true);
+            _mainCamera.SetActive(false);
         }
-        Debug.Log(_sens);
-        _goldPlayerController.Camera.MouseSensitivity = new Vector2(_sens,_sens);
-        foreach (var audio in _audioSources)
+        else
         {
-            audio.volume = _vol;
+            Debug.Log(_sens);
+            _goldPlayerController.Camera.MouseSensitivity = new Vector2(_sens,_sens);
+            foreach (var audio in _audioSources)
+            {
+                audio.volume = _vol;
+            }
+            AudioItem volumeAudioItem = new AudioItem(true, true, 1f, 0.9f, 1.1f, true, _vol,_audioClips);
+            _goldPlayerController.Audio.WalkFootsteps = volumeAudioItem;
+            _goldPlayerController.Audio.CrouchFootsteps = volumeAudioItem;
+            _goldPlayerController.Audio.RunFootsteps = volumeAudioItem;
         }
-        AudioItem volumeAudioItem = new AudioItem(true, true, 1f, 0.9f, 1.1f, true, _vol,_audioClips);
-        _goldPlayerController.Audio.WalkFootsteps = volumeAudioItem;
-        _goldPlayerController.Audio.CrouchFootsteps = volumeAudioItem;
-        _goldPlayerController.Audio.RunFootsteps = volumeAudioItem;
     }
 }

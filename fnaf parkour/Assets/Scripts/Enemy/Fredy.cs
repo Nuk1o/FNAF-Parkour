@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
+using YG;
 
 public class Fredy : MonoBehaviour
 {
@@ -8,11 +9,16 @@ public class Fredy : MonoBehaviour
     [SerializeField] private NavMeshAgent _agent;
     [SerializeField] Animator _animator;
     [SerializeField] private float _lookRadius;
+    [SerializeField] private Transform _targetMobile;
 
     private float _distance;
     private void Start()
     {
         _agent.GetComponent<NavMeshAgent>();
+        if (YandexGame.EnvironmentData.isMobile)
+        {
+            _target = _targetMobile;
+        }
     }
 
     private void Update()
