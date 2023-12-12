@@ -11596,7 +11596,6 @@ GameObject:
   - component: {fileID: 6577792321216619947}
   - component: {fileID: 2005400875044110380}
   - component: {fileID: 7439917941227344197}
-  - component: {fileID: 7439917941227344198}
   m_Layer: 0
   m_Name: Teleport
   m_TagString: Untagged
@@ -27641,38 +27640,6 @@ MonoBehaviour:
   - {fileID: 1806970078}
   _canvas: {fileID: 1070892747}
   _timerText: {fileID: 1958225239}
---- !u!205 &7439917941227344198
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2917112144847803455}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
-  m_Size: 1
-  m_FadeMode: 0
-  m_AnimateCrossFading: 1
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.764625
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 677210431841574723}
-    - renderer: {fileID: 3252145702549010582}
-    - renderer: {fileID: 8951224784848467458}
-    - renderer: {fileID: 1694138273152806448}
-  - screenRelativeHeight: 0.5078855
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 677210431841574723}
-    - renderer: {fileID: 3252145702549010582}
-    - renderer: {fileID: 8951224784848467458}
-    - renderer: {fileID: 1694138273152806448}
-  - screenRelativeHeight: 0.462808
-    fadeTransitionWidth: 0
-    renderers: []
-  m_Enabled: 1
 --- !u!1 &7527882233727381076
 GameObject:
   m_ObjectHideFlags: 0

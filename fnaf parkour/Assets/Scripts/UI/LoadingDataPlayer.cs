@@ -25,6 +25,7 @@ public class LoadingDataPlayer : MonoBehaviour
             if (YandexGame.auth)
             {
                 StopCoroutine(CheckAuth());
+                _name.text = YandexGame.playerName;
             }
             else
             {
@@ -40,7 +41,7 @@ public class LoadingDataPlayer : MonoBehaviour
     }
     void DebugData()
     {
-        _name.text = YandexGame.playerName;
+        StartCoroutine(CheckAuth());
     }
     
     public void NewName()

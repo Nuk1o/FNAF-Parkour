@@ -16,7 +16,7 @@ MonoBehaviour:
   playerPhotoSize: 0
   autoGameReadyAPI: 1
   playerInfoSimulation:
-    authorized: 1
+    authorized: 0
     isMobile: 0
     language: ru
     name: "\u0422\u0423\u0413\u0420\u0418\u041A\u0418"
