@@ -1,5 +1,3 @@
-using System;
-using System.Globalization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -15,7 +13,7 @@ public class Teleport : MonoBehaviour
     private float _timer;
     private void Awake()
     {
-        _closeBtn = _canvas.transform.GetChild(0).transform.gameObject.GetComponent<Button>();
+        _closeBtn = _canvas.transform.GetChild(0).transform.GetChild(0).gameObject.GetComponent<Button>();
         _canvas.SetActive(false);
     }
     
@@ -77,10 +75,12 @@ public class Teleport : MonoBehaviour
         {
             if (YandexGame.savesData.recordsLevels[_levelID] == 0)
             {
+                YandexGame.savesData.recordsLevels[_levelID] = _timer;
                 YandexGame.NewLBScoreTimeConvert(_nameLB, _timer);
             }
             else if(YandexGame.savesData.recordsLevels[_levelID] > _timer)
             {
+                YandexGame.savesData.recordsLevels[_levelID] = _timer;
                 YandexGame.NewLBScoreTimeConvert(_nameLB, _timer);
             }
             YandexGame.GetLeaderboard(_nameLB,20, 3, 3, "Small");

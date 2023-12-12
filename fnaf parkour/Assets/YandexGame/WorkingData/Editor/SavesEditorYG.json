@@ -1,25 +1,27 @@
 {
-    "idSave": 1266,
+    "idSave": 4,
     "isFirstSession": false,
     "language": "ru",
-    "promptDone": true,
+    "promptDone": false,
     "money": 1,
     "newPlayerName": "Hello!",
     "openLevels": [
         true,
-        true,
-        true,
-        true
+        false,
+        false,
+        false
     ],
     "recordsLevels": [
-        0,
-        0,
-        0,
-        0
+        0.0,
+        0.0,
+        0.0,
+        0.0
     ],
     "energy": 3,
     "sensivity": 1.0,
-    "volumeAudio": 0.7900110483169556,
-    "dateTicks": 638376582600000000,
-    "isPlay": true
+    "volumeAudio": 1.0,
+    "dateTicks": 0,
+    "isPlay": true,
+    "widhtScreen": 2778,
+    "heightScreen": 1284
 }

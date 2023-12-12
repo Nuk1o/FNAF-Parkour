@@ -16,7 +16,7 @@ namespace YG
         public int money = 1;                       // Можно задать полям значения по умолчанию
         public string newPlayerName = "Hello!";
         public bool[] openLevels = new bool[4];
-        public int[] recordsLevels = new int[4];
+        public float[] recordsLevels = new float[4];
 
         // Ваши сохранения
 
@@ -25,6 +25,8 @@ namespace YG
         public float volumeAudio = 1;
         public long dateTicks = 0;
         public bool isPlay = false;
+
+        public int widhtScreen, heightScreen;
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны
 
 
