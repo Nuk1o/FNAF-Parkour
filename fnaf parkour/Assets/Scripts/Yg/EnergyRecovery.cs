@@ -16,7 +16,6 @@ public class EnergyRecovery : MonoBehaviour
     void Awake()
     {
         energyRecoveryScript = GameObject.Find("energyRecoveryScript");
- 
         if (instance != null && instance != this)
             Destroy(this.gameObject);
         else

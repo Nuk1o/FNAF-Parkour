@@ -49,22 +49,16 @@ public class TimerEnergy : MonoBehaviour
         {
             if (YandexGame.savesData.energy<5)
             {
-                
-                _timeNew = new DateTime(YandexGame.savesData.dateTicks);
-                Debug.Log("Время: "+ new DateTime(YandexGame.savesData.dateTicks));
-                Debug.Log("Время сейчас: "+new DateTime(DateTime.Now.Ticks));
-                if (new DateTime(DateTime.Now.Ticks)<_timeNew)
-                {
-                    _energyTimeTxt.gameObject.SetActive(true);
-                    DateTime _nowDateTime = new DateTime(DateTime.Now.Ticks);
-                    DateTime _newDateTime = new DateTime(_timeNew.Ticks - _nowDateTime.Ticks);
-                    _energyTimeTxt.text = $"{_newDateTime.Minute}";
-                }
-                else
-                {
-                    _energyTimeTxt.gameObject.SetActive(false);
-                    _energyMin.gameObject.SetActive(false);
-                }
+                _energyTimeTxt.gameObject.SetActive(true);
+                DateTime _minutesTimer = new DateTime(YandexGame.savesData.minutesEnergy);
+                Debug.Log(_minutesTimer);
+                Debug.Log(_minutesTimer.Minute-DateTime.Now.Minute);
+                _energyTimeTxt.text = $"{_minutesTimer.Minute-DateTime.Now.Minute}";
+            }
+            else
+            {
+                _energyTimeTxt.gameObject.SetActive(false);
+                _energyMin.gameObject.SetActive(false);
             }
             yield return new WaitForSeconds(10);
         }

@@ -18,6 +18,8 @@ namespace YG
         public bool[] openLevels = new bool[4];
         public float[] recordsLevels = new float[4];
 
+        
+
         // Ваши сохранения
 
         public int energy = 5;
@@ -25,6 +27,9 @@ namespace YG
         public float volumeAudio = 1;
         public long dateTicks = 0;
         public bool isPlay = false;
+
+        public long lastLogoutTime;
+        public long minutesEnergy;
 
         public int widhtScreen, heightScreen;
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны

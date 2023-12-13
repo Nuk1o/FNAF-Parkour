@@ -11,6 +11,7 @@ public class LoadingSceneGame : MonoBehaviour
     [SerializeField] private GameObject _loadingGO;
     [SerializeField] private Slider _loadingSlider;
     [SerializeField] private TMP_Text _loadingText;
+    [SerializeField] private EnergyRecovery2 _energyRecovery2;
     private AsyncOperation _async_operation;
 
     
@@ -22,8 +23,7 @@ public class LoadingSceneGame : MonoBehaviour
     {
         StartCoroutine("AsyncLoadCOR");
         YandexGame.savesData.isPlay = true;
-        YandexGame.savesData.energy--;
-        YandexGame.SaveProgress();
+        _energyRecovery2.UseEnergy();
     }
     IEnumerator AsyncLoadCOR()
     {

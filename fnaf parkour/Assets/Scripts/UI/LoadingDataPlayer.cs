@@ -1,17 +1,12 @@
 using System.Collections;
 using UnityEngine;
 using YG;
-using TMPro;
 
 public class LoadingDataPlayer : MonoBehaviour
 {
-    [SerializeField] private TMP_Text _name;
     [SerializeField] LeaderboardYG leaderboardYG;
-    private void OnEnable() => YandexGame.GetDataEvent += DebugData;
-    private void OnDisable() => YandexGame.GetDataEvent -= DebugData;
     private void Start()
     {
-        DebugData();
         NewName();
         if (YandexGame.SDKEnabled)
         {
@@ -25,23 +20,17 @@ public class LoadingDataPlayer : MonoBehaviour
             if (YandexGame.auth)
             {
                 StopCoroutine(CheckAuth());
-                _name.text = YandexGame.playerName;
             }
             else
             {
                 YandexGame.RequestAuth();
                 NewName();
-                DebugData();
                 
                 yield return new WaitForSeconds(3);
             }
 
             yield return new WaitForSeconds(3);
         }
-    }
-    void DebugData()
-    {
-        StartCoroutine(CheckAuth());
     }
     
     public void NewName()

@@ -2274,7 +2274,6 @@ GameObject:
   - component: {fileID: 425861159}
   - component: {fileID: 425861158}
   - component: {fileID: 425861157}
-  - component: {fileID: 425861162}
   m_Layer: 0
   m_Name: "\u041C\u0418\u0428\u041A\u0410 \u0424\u0420\u042D\u0414\u0418 (3)"
   m_TagString: Untagged
@@ -2385,32 +2384,6 @@ Transform:
   - {fileID: 1293188599}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!205 &425861162
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 425861156}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 0.0056889653, y: 0.3596416, z: 0.018666327}
-  m_Size: 0.8519431
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.6
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 69755909}
-  - screenRelativeHeight: 0.2778022
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 69755909}
-  - screenRelativeHeight: 0.19610539
-    fadeTransitionWidth: 0
-    renderers: []
-  m_Enabled: 1
 --- !u!1 &450960089
 GameObject:
   m_ObjectHideFlags: 0
@@ -5604,7 +5577,6 @@ GameObject:
   - component: {fileID: 1218349108}
   - component: {fileID: 1218349107}
   - component: {fileID: 1218349106}
-  - component: {fileID: 1218349111}
   m_Layer: 0
   m_Name: "\u041C\u0418\u0428\u041A\u0410 \u0424\u0420\u042D\u0414\u0418 (4)"
   m_TagString: Untagged
@@ -5715,32 +5687,6 @@ Transform:
   - {fileID: 690295849}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!205 &1218349111
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1218349105}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 0.0056889057, y: 0.3596416, z: 0.018666625}
-  m_Size: 0.851943
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.6
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 867672310}
-  - screenRelativeHeight: 0.16667612
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 867672310}
-  - screenRelativeHeight: 0.1
-    fadeTransitionWidth: 0
-    renderers: []
-  m_Enabled: 1
 --- !u!1 &1244602927
 GameObject:
   m_ObjectHideFlags: 0
@@ -6466,7 +6412,6 @@ GameObject:
   - component: {fileID: 1370421508}
   - component: {fileID: 1370421507}
   - component: {fileID: 1370421506}
-  - component: {fileID: 1370421511}
   m_Layer: 0
   m_Name: "\u041C\u0418\u0428\u041A\u0410 \u0424\u0420\u042D\u0414\u0418 (2)"
   m_TagString: Untagged
@@ -6577,32 +6522,6 @@ Transform:
   - {fileID: 1654884162}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!205 &1370421511
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1370421505}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 0.0056889653, y: 0.35964155, z: 0.018666327}
-  m_Size: 0.8519431
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.6
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 1522671685}
-  - screenRelativeHeight: 0.28467184
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 1522671685}
-  - screenRelativeHeight: 0.23205587
-    fadeTransitionWidth: 0
-    renderers: []
-  m_Enabled: 1
 --- !u!1 &1376891329
 GameObject:
   m_ObjectHideFlags: 0
@@ -8679,7 +8598,6 @@ GameObject:
   - component: {fileID: 1859398519}
   - component: {fileID: 1859398518}
   - component: {fileID: 1859398517}
-  - component: {fileID: 1859398522}
   m_Layer: 0
   m_Name: "\u041C\u0418\u0428\u041A\u0410 \u0424\u0420\u042D\u0414\u0418 (1)"
   m_TagString: Untagged
@@ -8790,32 +8708,6 @@ Transform:
   - {fileID: 1020531016}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!205 &1859398522
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1859398516}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 0.0056889653, y: 0.3596416, z: 0.018666327}
-  m_Size: 0.8519431
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.6
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 1449376447}
-  - screenRelativeHeight: 0.2341414
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 1449376447}
-  - screenRelativeHeight: 0.1596904
-    fadeTransitionWidth: 0
-    renderers: []
-  m_Enabled: 1
 --- !u!1 &1884746966
 GameObject:
   m_ObjectHideFlags: 0
@@ -16975,7 +16867,6 @@ GameObject:
   - component: {fileID: 6811637782107682343}
   - component: {fileID: 8455199117217716104}
   - component: {fileID: 7678257687926379914}
-  - component: {fileID: 8455199117217716105}
   m_Layer: 0
   m_Name: "\u041C\u0418\u0428\u041A\u0410 \u0424\u0420\u042D\u0414\u0418"
   m_TagString: Untagged
@@ -28154,32 +28045,6 @@ CapsuleCollider:
   m_Height: 0.81
   m_Direction: 1
   m_Center: {x: 0, y: 0.39, z: 0}
---- !u!205 &8455199117217716105
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5000917991548566953}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 0.0056901574, y: 0.35964155, z: 0.018666327}
-  m_Size: 0.8519431
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.6
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 6084549094879455267}
-  - screenRelativeHeight: 0.22380678
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 6084549094879455267}
-  - screenRelativeHeight: 0.2157063
-    fadeTransitionWidth: 0
-    renderers: []
-  m_Enabled: 1
 --- !u!4 &8456546136628948920
 Transform:
   m_ObjectHideFlags: 0
