@@ -9375,7 +9375,6 @@ GameObject:
   - component: {fileID: 1393218105}
   - component: {fileID: 1393218104}
   - component: {fileID: 1393218103}
-  - component: {fileID: 1393218106}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -9457,21 +9456,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1393218106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1393218102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9803ba05f2211d44945cd9d9e0a657a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _energyTimeTxt: {fileID: 1774585155}
-  _energyMin: {fileID: 889108157}
-  _energyRecovery2: {fileID: 1912105615}
 --- !u!1 &1399494152
 GameObject:
   m_ObjectHideFlags: 0
@@ -11153,6 +11137,7 @@ GameObject:
   - component: {fileID: 1619103315}
   - component: {fileID: 1619103314}
   - component: {fileID: 1619103313}
+  - component: {fileID: 1619103319}
   - component: {fileID: 1619103318}
   m_Layer: 5
   m_Name: SetLevel
@@ -11267,6 +11252,20 @@ MonoBehaviour:
   _canvasScaler: {fileID: 1619103315}
   _bgUI: {fileID: 935040540}
   _isFirstWindow: 0
+--- !u!114 &1619103319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619103311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9803ba05f2211d44945cd9d9e0a657a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _energyTimeTxt: {fileID: 1774585155}
+  _energyMin: {fileID: 889108157}
 --- !u!1 &1621544365
 GameObject:
   m_ObjectHideFlags: 0
@@ -11561,9 +11560,9 @@ RectTransform:
   - {fileID: 700287415}
   m_Father: {fileID: 190541262}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 23, y: 47.850006}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 23, y: -202}
   m_SizeDelta: {x: 765.6702, y: 95.7088}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1699936251
@@ -13095,7 +13094,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1912105613}
-  - component: {fileID: 1912105614}
   - component: {fileID: 1912105615}
   m_Layer: 0
   m_Name: energyRecoveryScript
@@ -13119,18 +13117,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1912105614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1912105611}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 464c8ab2eab5ff746af14fbc4ba5ab8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1912105615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13143,11 +13129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cc41a2a71cf0c649bd3e1ba529e60e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxEnergy: 5
-  currentEnergy: 0
-  energyIncreaseAmount: 1
-  energyDecreaseAmount: 1
-  timeToIncreaseEnergy: 900
 --- !u!1 &1942252301
 GameObject:
   m_ObjectHideFlags: 0

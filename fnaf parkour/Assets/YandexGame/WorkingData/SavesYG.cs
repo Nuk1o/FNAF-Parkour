@@ -17,7 +17,8 @@ namespace YG
         public string newPlayerName = "Hello!";
         public bool[] openLevels = new bool[4];
         public float[] recordsLevels = new float[4];
-
+        public long[] lastLogOutTime = new long[5];
+        public long[] endOutTime = new long[5];
         
 
         // Ваши сохранения
@@ -27,9 +28,6 @@ namespace YG
         public float volumeAudio = 1;
         public long dateTicks = 0;
         public bool isPlay = false;
-
-        public long lastLogoutTime;
-        public long minutesEnergy;
 
         public int widhtScreen, heightScreen;
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны
@@ -49,6 +47,18 @@ namespace YG
             recordsLevels[1] = 0;
             recordsLevels[2] = 0;
             recordsLevels[3] = 0;
+
+            lastLogOutTime[0] = 0;
+            lastLogOutTime[1] = 0;
+            lastLogOutTime[2] = 0;
+            lastLogOutTime[3] = 0;
+            lastLogOutTime[4] = 0;
+            
+            endOutTime[0] = 0;
+            endOutTime[1] = 0;
+            endOutTime[2] = 0;
+            endOutTime[3] = 0;
+            endOutTime[4] = 0;
         }
     }
 }

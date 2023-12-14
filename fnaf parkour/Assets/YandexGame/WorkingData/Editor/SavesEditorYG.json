@@ -1,5 +1,5 @@
 {
-    "idSave": 15489,
+    "idSave": 15765,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -17,13 +17,25 @@
         0.0,
         0.0
     ],
-    "energy": 4,
+    "lastLogOutTime": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "endOutTime": [
+        0,
+        0,
+        0,
+        638381288862603979,
+        0
+    ],
+    "energy": 5,
     "sensivity": 1.0,
     "volumeAudio": 1.0,
     "dateTicks": 0,
     "isPlay": true,
-    "lastLogoutTime": 638381084770315108,
-    "minutesEnergy": 638381090478467654,
     "widhtScreen": 2778,
     "heightScreen": 1284
 }
