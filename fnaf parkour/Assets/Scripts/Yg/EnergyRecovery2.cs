@@ -9,11 +9,13 @@ public class EnergyRecovery2 : MonoBehaviour
     private int minutesUntilRecovery;  // Время до восстановления 1 энергии
     private DateTime lastCheckTime;
     private DateTime[] lastCheckTimeArr = new DateTime[5];
-    private int _timeToEnergy = 5;//Сколько нужно ждать в минутах
+    private int _timeToEnergy = 15;//Сколько нужно ждать в минутах
     public static EnergyRecovery2 instance;
     public static GameObject energyRecoveryScript;
 
     private int energySum = 0;
+
+    private bool _isActiveEnergyRecovery = false;
     
     void Awake()
     {
@@ -28,6 +30,11 @@ public class EnergyRecovery2 : MonoBehaviour
     }
 
     private void Start()
+    {
+        CheckTime();
+    }
+
+    public void CheckTime()
     {
         currentEnergy = YandexGame.savesData.energy;
         for (int i = 0; i < 5; i++)
@@ -58,7 +65,8 @@ public class EnergyRecovery2 : MonoBehaviour
                 CreateTaskAsync($"AddEnergy{j}");
                 Debug.Log($"Start | AddEnergy{j}");
             }
-        } }
+        }
+    }
 
     private async Task CheckTimeAsync(int index,string taskName, DateTime startTime,DateTime endTimes, int minutesToWait)
     {
@@ -97,6 +105,7 @@ public class EnergyRecovery2 : MonoBehaviour
                     //CreateTaskAsync($"AddEnergy{YandexGame.savesData.energy}");
                     Debug.Log($"CheckTimeAsync | AddEnergy{YandexGame.savesData.energy}");
                 }
+                
             }
             else
             {
@@ -141,6 +150,7 @@ public class EnergyRecovery2 : MonoBehaviour
         lastCheckTime = DateTime.Now;
         CreateTaskAsync($"AddEnergy{YandexGame.savesData.energy}");
         Debug.Log($"UseEnergy | AddEnergy{YandexGame.savesData.energy}");
+        YandexGame.SaveProgress();
     }
 
     private async Task CreateTaskAsync(string nameAsync)

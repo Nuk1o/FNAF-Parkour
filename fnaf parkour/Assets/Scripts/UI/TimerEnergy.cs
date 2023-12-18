@@ -1,7 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using TMPro;
 using UnityEngine;
 using YG;
@@ -10,6 +8,9 @@ public class TimerEnergy : MonoBehaviour
 {
     [SerializeField] private TMP_Text _energyTimeTxt;
     [SerializeField] private TMP_Text _energyMin;
+    private EnergyRecovery2 _energyRecovery2;
+    public static GameObject energyRecoveryScript;
+    
     private DateTime[] lastCheckTimeArr = new DateTime[5];
 
     private DateTime _timeNew;
@@ -18,9 +19,16 @@ public class TimerEnergy : MonoBehaviour
     {
         _energyMin.gameObject.SetActive(false);
     }
-
     private void OnEnable()
     {
+        TimeTextCheck();
+    }
+
+    private void TimeTextCheck()
+    {
+        energyRecoveryScript = GameObject.Find("energyRecoveryScript");
+        _energyRecovery2 = energyRecoveryScript.GetComponent<EnergyRecovery2>();
+        _energyRecovery2.CheckTime();
         for (int i = 0; i < 5; i++)
         {
             Debug.Log(YandexGame.savesData.lastLogOutTime[i]);
@@ -50,6 +58,8 @@ public class TimerEnergy : MonoBehaviour
             {
                 _energyMin.gameObject.SetActive(true);
                 _energyTimeTxt.gameObject.SetActive(true);   
+                _energyRecovery2.CheckTime();
+                TimeTextCheck();
             }
         }
         else
@@ -97,7 +107,7 @@ public class TimerEnergy : MonoBehaviour
                 _energyTimeTxt.gameObject.SetActive(false);
                 _energyMin.gameObject.SetActive(false);
             }
-            yield return new WaitForSeconds(10);
+            yield return new WaitForSeconds(1);
         }
     }
     

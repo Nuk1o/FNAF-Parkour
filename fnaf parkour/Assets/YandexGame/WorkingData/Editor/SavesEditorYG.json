@@ -1,5 +1,5 @@
 {
-    "idSave": 15765,
+    "idSave": 15859,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -7,12 +7,12 @@
     "newPlayerName": "Hello!",
     "openLevels": [
         true,
-        false,
+        true,
         false,
         false
     ],
     "recordsLevels": [
-        0.0,
+        113.39048767089844,
         0.0,
         0.0,
         0.0
@@ -21,21 +21,21 @@
         0,
         0,
         0,
-        0,
-        0
+        638385182706119445,
+        638385180492567855
     ],
     "endOutTime": [
         0,
         0,
         0,
-        638381288862603979,
-        0
+        0,
+        638385187533854709
     ],
-    "energy": 5,
+    "energy": 3,
     "sensivity": 1.0,
     "volumeAudio": 1.0,
     "dateTicks": 0,
-    "isPlay": true,
-    "widhtScreen": 2778,
-    "heightScreen": 1284
+    "isPlay": false,
+    "widhtScreen": 1920,
+    "heightScreen": 1080
 }
