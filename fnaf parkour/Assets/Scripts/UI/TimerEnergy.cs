@@ -18,17 +18,19 @@ public class TimerEnergy : MonoBehaviour
     private void Awake()
     {
         _energyMin.gameObject.SetActive(false);
+        
     }
     private void OnEnable()
     {
         TimeTextCheck();
+        energyRecoveryScript = GameObject.Find("energyRecoveryScript");
+        energyRecoveryScript.SetActive(false);
+        new WaitForSeconds(1);
+        energyRecoveryScript.SetActive(true);
     }
 
     private void TimeTextCheck()
     {
-        energyRecoveryScript = GameObject.Find("energyRecoveryScript");
-        _energyRecovery2 = energyRecoveryScript.GetComponent<EnergyRecovery2>();
-        _energyRecovery2.CheckTime();
         for (int i = 0; i < 5; i++)
         {
             Debug.Log(YandexGame.savesData.lastLogOutTime[i]);
@@ -44,6 +46,7 @@ public class TimerEnergy : MonoBehaviour
             }
         }
     }
+    
 
     private void OnDisable()
     {
@@ -57,9 +60,11 @@ public class TimerEnergy : MonoBehaviour
             if (!_energyTimeTxt.gameObject.activeInHierarchy || !_energyMin.gameObject.activeInHierarchy)
             {
                 _energyMin.gameObject.SetActive(true);
-                _energyTimeTxt.gameObject.SetActive(true);   
-                _energyRecovery2.CheckTime();
-                TimeTextCheck();
+                _energyTimeTxt.gameObject.SetActive(true);
+                if (_energyTimeTxt.text == ""||_energyTimeTxt.text == " ")
+                {
+                    _energyTimeTxt.text = "15";
+                }
             }
         }
         else

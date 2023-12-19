@@ -7,7 +7,6 @@ public class LoadingDataPlayer : MonoBehaviour
     [SerializeField] LeaderboardYG leaderboardYG;
     private void Start()
     {
-        NewName();
         if (YandexGame.SDKEnabled)
         {
             StartCoroutine(CheckAuth());
@@ -24,18 +23,11 @@ public class LoadingDataPlayer : MonoBehaviour
             else
             {
                 YandexGame.RequestAuth();
-                NewName();
                 
                 yield return new WaitForSeconds(3);
             }
 
             yield return new WaitForSeconds(3);
         }
-    }
-    
-    public void NewName()
-    {
-        leaderboardYG.nameLB = "TimeToCompleteLevel1";
-        leaderboardYG.UpdateLB();
     }
 }

@@ -17,8 +17,8 @@ MonoBehaviour:
   autoGameReadyAPI: 1
   playerInfoSimulation:
     authorized: 0
-    isMobile: 0
-    language: ru
+    isMobile: 1
+    language: en
     name: "\u0422\u0423\u0413\u0420\u0418\u041A\u0418"
     uniqueID: 000
     photo: https://justplaygames.ru/public/icon_player.png
@@ -30,7 +30,7 @@ MonoBehaviour:
   durationOfAdSimulation: 0.5
   loadAdWithDelaySimulation: 0
   testErrorOfRewardedAdsInEditor: 0
-  saveCloud: 1
+  saveCloud: 0
   flush: 1
   localSaveSync: 1
   saveCloudInterval: 5
@@ -264,10 +264,13 @@ MonoBehaviour:
     defaultFont: []
     ru:
     - {fileID: 12800000, guid: a1e2914ef49d0d84a8fde76d53367bf5, type: 3}
+    - {fileID: 12800000, guid: e92668ddec0f842468571dbeafe4796c, type: 3}
     en:
     - {fileID: 12800000, guid: a1e2914ef49d0d84a8fde76d53367bf5, type: 3}
+    - {fileID: 12800000, guid: e92668ddec0f842468571dbeafe4796c, type: 3}
     tr:
     - {fileID: 12800000, guid: 82cc91725ab2f0c41920038a250d768b, type: 3}
+    - {fileID: 12800000, guid: e92668ddec0f842468571dbeafe4796c, type: 3}
     az: []
     be: []
     he: []
@@ -297,11 +300,14 @@ MonoBehaviour:
     ru:
     - {fileID: 11400000, guid: 7a773bc0aa87ad54caf599a0b5d8b345, type: 2}
     - {fileID: 11400000, guid: aa23b1e038ad79f4cbdf514e3fab51bd, type: 2}
+    - {fileID: 11400000, guid: 182e1b4db466e964c889393ef72b95bd, type: 2}
     en:
     - {fileID: 11400000, guid: 417a1b768f19ea04daf4e8b5fe1a4de0, type: 2}
     - {fileID: 11400000, guid: aa23b1e038ad79f4cbdf514e3fab51bd, type: 2}
+    - {fileID: 11400000, guid: 1093ace41b7d9d5428b64b7973e92cfd, type: 2}
     tr:
     - {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+    - {fileID: 11400000, guid: 1093ace41b7d9d5428b64b7973e92cfd, type: 2}
     az: []
     be: []
     he: []
