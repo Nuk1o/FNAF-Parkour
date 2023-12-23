@@ -28,21 +28,6 @@ public class TimerEnergy : MonoBehaviour
 
     private void TimeTextCheck()
     {
-        // for (int i = 0; i < 5; i++)
-        // {
-        //     Debug.Log(YandexGame.savesData.lastLogOutTime[i]);
-        //     lastCheckTimeArr[i]= LoadLastCheckTime($"AddEnergy{i}");
-        // }
-
-        // for (int j = 0; j < 5; j++)
-        // {
-        //     if (lastCheckTimeArr[j]!=new DateTime())
-        //     {
-        //         StartCoroutine(CheckEnergy(lastCheckTimeArr[j]));
-        //         Debug.Log($"||||||||||||||||||||||||||||||||||||||||||||||||||||TEST {j}");
-        //     }
-        // }
-        
         StartCoroutine(CheckEnergy(new DateTime(YandexGame.savesData.tickStopTimer)));
     }
     
@@ -89,7 +74,7 @@ public class TimerEnergy : MonoBehaviour
 
                 TimeSpan timeDifference = _dateTime - DateTime.Now;
 
-                if (timeDifference.TotalMinutes < 0)
+                if (timeDifference.TotalMinutes < -1)
                 {
                     // Если разница отрицательная, значит, прошел новый час
                     // Добавим 60 минут к сохраненному времени
@@ -100,10 +85,9 @@ public class TimerEnergy : MonoBehaviour
                 int remainingMinutes = (int)timeDifference.TotalMinutes+1;
 
                 _energyTimeTxt.text = $"{remainingMinutes}";
-                if (_dateTime<DateTime.Now)
+                if (_dateTime<=DateTime.Now)
                 {
-                    _energyHolder.PlusEnergy(1);
-                    _energyHolder.ResetEnd();
+                    StopCoroutine(CheckEnergy(_dateTime));
                     yield break;
                 }
             }
@@ -115,22 +99,4 @@ public class TimerEnergy : MonoBehaviour
             yield return new WaitForSeconds(1);
         }
     }
-    
-    // private DateTime LoadLastCheckTime(string name)
-    // {
-    //     switch (name)
-    //     {
-    //         case "AddEnergy0":
-    //             return new DateTime(YandexGame.savesData.endOutTime[0]);
-    //         case "AddEnergy1":
-    //             return new DateTime(YandexGame.savesData.endOutTime[1]);
-    //         case "AddEnergy2":
-    //             return new DateTime(YandexGame.savesData.endOutTime[2]);
-    //         case "AddEnergy3":
-    //             return new DateTime(YandexGame.savesData.endOutTime[3]);
-    //         case "AddEnergy4":
-    //             return new DateTime(YandexGame.savesData.endOutTime[4]);
-    //     }
-    //     return DateTime.Now;
-    // }
 }

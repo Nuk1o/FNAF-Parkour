@@ -26,7 +26,7 @@ public class LoadingSceneGame : MonoBehaviour
         energyRecoveryScript = GameObject.Find("energyHolderScript");
         _energyHolder = energyRecoveryScript.GetComponent<EnergyHolder>();
         _energyHolder.MinusEnergy(1);
-        //Debug.Log("CLICK |||||||||||||||| " + _energyHolder.GetEnergy());
+        Debug.Log("CLICK |||||||||||||||| " + _energyHolder.GetEnergy());
     }
     IEnumerator AsyncLoadCOR()
     {
