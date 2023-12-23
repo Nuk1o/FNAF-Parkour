@@ -17,7 +17,7 @@ public class LoadingSettings : MonoBehaviour
 
     private void Awake()
     {
-        if (YandexGame.SDKEnabled == true)
+        if (YandexGame.SDKEnabled)
         {
             GetData();
             SetSettings();
@@ -33,7 +33,8 @@ public class LoadingSettings : MonoBehaviour
     private void SetSettings()
     {
         Debug.Log(YandexGame.EnvironmentData.isMobile);
-        if (YandexGame.EnvironmentData.isMobile)
+        Debug.Log(YandexGame.EnvironmentData.deviceType);
+        if (YandexGame.EnvironmentData.isMobile||YandexGame.EnvironmentData.deviceType == "mobile")
         {
             _goldPlayerController.gameObject.SetActive(false);
             Cursor.lockState = CursorLockMode.Confined;

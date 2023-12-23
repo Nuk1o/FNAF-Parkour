@@ -1,7 +1,7 @@
 {
-    "idSave": 15939,
+    "idSave": 15995,
     "isFirstSession": false,
-    "language": "en",
+    "language": "ru",
     "promptDone": false,
     "money": 1,
     "newPlayerName": "Hello!",
@@ -17,21 +17,9 @@
         0.0,
         0.0
     ],
-    "lastLogOutTime": [
-        0,
-        0,
-        0,
-        0,
-        0
-    ],
-    "endOutTime": [
-        0,
-        0,
-        0,
-        0,
-        0
-    ],
-    "energy": 5,
+    "tickStartTimer": 638388981177099132,
+    "tickStopTimer": 638388990177099132,
+    "energy": 4,
     "sensivity": 1.0,
     "volumeAudio": 1.0,
     "dateTicks": 0,

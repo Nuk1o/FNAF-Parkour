@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -30,7 +28,7 @@ public class LoadResource : MonoBehaviour
 
     private void Start()
     {
-        if (YandexGame.SDKEnabled == true)
+        if (YandexGame.SDKEnabled)
         {
             GetLoad();
         }

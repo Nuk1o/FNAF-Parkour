@@ -11,9 +11,9 @@ public class LoadingSceneGame : MonoBehaviour
     [SerializeField] private GameObject _loadingGO;
     [SerializeField] private Slider _loadingSlider;
     [SerializeField] private TMP_Text _loadingText;
-    [SerializeField] private EnergyRecovery2 _energyRecovery2;
     private AsyncOperation _async_operation;
-
+    private EnergyHolder _energyHolder;
+    public static GameObject energyRecoveryScript;
     
     public void SelectLevelLoading(Button _continue)
     {
@@ -23,7 +23,10 @@ public class LoadingSceneGame : MonoBehaviour
     {
         StartCoroutine("AsyncLoadCOR");
         YandexGame.savesData.isPlay = true;
-        _energyRecovery2.UseEnergy();
+        energyRecoveryScript = GameObject.Find("energyHolderScript");
+        _energyHolder = energyRecoveryScript.GetComponent<EnergyHolder>();
+        _energyHolder.MinusEnergy(1);
+        Debug.Log("CLICK |||||||||||||||| " + _energyHolder.GetEnergy());
     }
     IEnumerator AsyncLoadCOR()
     {

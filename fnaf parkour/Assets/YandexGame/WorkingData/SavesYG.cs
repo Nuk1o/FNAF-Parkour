@@ -17,9 +17,8 @@ namespace YG
         public string newPlayerName = "Hello!";
         public bool[] openLevels = new bool[4];
         public float[] recordsLevels = new float[4];
-        public long[] lastLogOutTime = new long[5];
-        public long[] endOutTime = new long[5];
-        
+        public long tickStartTimer = 0;
+        public long tickStopTimer = 0;
 
         // Ваши сохранения
 
@@ -47,18 +46,7 @@ namespace YG
             recordsLevels[1] = 0;
             recordsLevels[2] = 0;
             recordsLevels[3] = 0;
-
-            lastLogOutTime[0] = 0;
-            lastLogOutTime[1] = 0;
-            lastLogOutTime[2] = 0;
-            lastLogOutTime[3] = 0;
-            lastLogOutTime[4] = 0;
             
-            endOutTime[0] = 0;
-            endOutTime[1] = 0;
-            endOutTime[2] = 0;
-            endOutTime[3] = 0;
-            endOutTime[4] = 0;
         }
     }
 }
