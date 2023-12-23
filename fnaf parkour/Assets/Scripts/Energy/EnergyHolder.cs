@@ -89,7 +89,7 @@ public class EnergyHolder : MonoBehaviour
         if (_energy < 5)
         {
             _endTimer = _startTimer.AddMinutes(15);
-            Debug.Log("ВРЕМЯ ОКОНЧАНИЯ ||||||||||||||| " + _endTimer);
+            //Debug.Log("ВРЕМЯ ОКОНЧАНИЯ ||||||||||||||| " + _endTimer);
             TimerRecovery(_endTimer);
         }
         else
