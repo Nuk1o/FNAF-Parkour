@@ -1,3 +1,4 @@
+using System;
 using Hertzole.GoldPlayer;
 using UnityEngine;
 using YG;
@@ -34,7 +35,7 @@ public class LoadingSettings : MonoBehaviour
     {
         Debug.Log(YandexGame.EnvironmentData.isMobile);
         Debug.Log(YandexGame.EnvironmentData.deviceType);
-        if (YandexGame.EnvironmentData.isMobile||YandexGame.EnvironmentData.deviceType == "mobile")
+        if (YandexGame.EnvironmentData.isMobile||YandexGame.EnvironmentData.deviceType == "mobile"||Application.isMobilePlatform)
         {
             _goldPlayerController.gameObject.SetActive(false);
             Cursor.lockState = CursorLockMode.Confined;

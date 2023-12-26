@@ -14,7 +14,7 @@ public class FixFpsForMobile : MonoBehaviour
     {
         if (YandexGame.SDKEnabled)
         {
-            if (YandexGame.EnvironmentData.isMobile || YandexGame.EnvironmentData.deviceType=="mobile")
+            if (YandexGame.EnvironmentData.isMobile || YandexGame.EnvironmentData.deviceType=="mobile"||Application.isMobilePlatform)
             {
                 _floor.material = _materialFloor;
                 _wall.material = _materialWall;
