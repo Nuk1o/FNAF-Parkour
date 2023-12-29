@@ -1,5 +1,5 @@
 {
-    "idSave": 16031,
+    "idSave": 16037,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -22,8 +22,8 @@
     "volumeAudio": 1.0,
     "dateTicks": 0,
     "isPlay": true,
-    "tickStartTimer": 638389731033095939,
-    "tickStopTimer": 638389740033095939,
+    "tickStartTimer": 638394145560859186,
+    "tickStopTimer": 638394154560859186,
     "widhtScreen": 1920,
     "heightScreen": 1080
 }

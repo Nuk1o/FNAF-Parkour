@@ -10,11 +10,12 @@ public class UIMobileFixYG : MonoBehaviour
     {
         if (YandexGame.EnvironmentData.isMobile || YandexGame.EnvironmentData.deviceType == "mobile" || Application.isMobilePlatform)
         {
+            //_canvasScaler.screenMatchMode = CanvasScaler.ScreenMatchMode.Expand;
             _canvasScaler.screenMatchMode = CanvasScaler.ScreenMatchMode.Expand;
         }
         else
         {
-            _canvasScaler.screenMatchMode = CanvasScaler.ScreenMatchMode.MatchWidthOrHeight;
+            _canvasScaler.screenMatchMode = CanvasScaler.ScreenMatchMode.Expand;
         }
     }
 }

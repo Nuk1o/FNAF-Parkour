@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
+using Cinemachine;
 
 public class FpsCamera : MonoBehaviour
 {
+    [SerializeField] CinemachineFreeLook _camera;
     public TouchArea fixedtouch; 
     [Range(0f, 5f)]
     public float Sensitivity;
@@ -30,7 +32,9 @@ public class FpsCamera : MonoBehaviour
     void LookUp()
     {
         lookVer = fixedtouch.touchDist.y * Sensitivity; 
-        transform.localEulerAngles -= new Vector3(lookVer, 0, 0); 
+        //transform.localEulerAngles -= new Vector3(lookVer, 0, 0); 
+        float lookVer2 = Mathf.Clamp(lookVer,-90,90);
+        transform.localEulerAngles -= new Vector3(lookVer, 0, 0);
     }
 
     void lookHorF()
