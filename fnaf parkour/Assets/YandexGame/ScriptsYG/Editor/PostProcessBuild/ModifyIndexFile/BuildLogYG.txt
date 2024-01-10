@@ -1,2 +1,2 @@
-Build path: E:/Unity/Projects/build
-Build number: 252
+Build path: E:/nukio_games/releaseFnaf
+Build number: 256

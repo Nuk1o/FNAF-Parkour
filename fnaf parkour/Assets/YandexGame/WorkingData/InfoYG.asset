@@ -17,7 +17,7 @@ MonoBehaviour:
   autoGameReadyAPI: 1
   playerInfoSimulation:
     authorized: 0
-    isMobile: 1
+    isMobile: 0
     language: ru
     name: "\u0422\u0423\u0413\u0420\u0418\u041A\u0418"
     uniqueID: 000
@@ -301,13 +301,16 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 7a773bc0aa87ad54caf599a0b5d8b345, type: 2}
     - {fileID: 11400000, guid: aa23b1e038ad79f4cbdf514e3fab51bd, type: 2}
     - {fileID: 11400000, guid: 182e1b4db466e964c889393ef72b95bd, type: 2}
+    - {fileID: 11400000, guid: a90d45be056297c43a23e1d047c3ce95, type: 2}
     en:
     - {fileID: 11400000, guid: 417a1b768f19ea04daf4e8b5fe1a4de0, type: 2}
     - {fileID: 11400000, guid: aa23b1e038ad79f4cbdf514e3fab51bd, type: 2}
     - {fileID: 11400000, guid: 1093ace41b7d9d5428b64b7973e92cfd, type: 2}
+    - {fileID: 11400000, guid: a90d45be056297c43a23e1d047c3ce95, type: 2}
     tr:
     - {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
     - {fileID: 11400000, guid: 1093ace41b7d9d5428b64b7973e92cfd, type: 2}
+    - {fileID: 11400000, guid: a90d45be056297c43a23e1d047c3ce95, type: 2}
     az: []
     be: []
     he: []
@@ -363,7 +366,7 @@ MonoBehaviour:
   purshasesSimulation: []
   metricaEnable: 1
   metricaCounterID: 0
-  debug: 1
+  debug: 0
   archivingBuild: 1
   logoImageFormat: 1
   backgroundImageFormat: 3
